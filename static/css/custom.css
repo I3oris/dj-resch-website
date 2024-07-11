@@ -1,0 +1,63 @@
+body {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+a {
+  color: #bb86fc;
+}
+
+a:hover {
+  color: #3700b3;
+}
+
+header, footer {
+  background-color: #1f1f1f;
+}
+
+.post-content {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label, form input, form textarea, form button {
+  margin: 10px 0;
+}
+
+form input, form textarea {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #444;
+}
+
+form button {
+  background-color: #6200ee;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #3700b3;
+}
+
+
+/* Style pour une galerie d'images en grille */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  padding: 10px;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
