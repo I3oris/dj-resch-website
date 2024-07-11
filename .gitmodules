@@ -1,0 +1,6 @@
+[submodule "themes/tailbliss"]
+	path = themes/tailbliss
+	url = https://github.com/nusserstudios/tailbliss.git
+[submodule "themes/ananke"]
+	path = themes/ananke
+	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git

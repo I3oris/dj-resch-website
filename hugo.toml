@@ -1,0 +1,38 @@
+baseURL = 'https://example.org/'
+languageCode = 'fr'
+title = 'DJ RESCH'
+theme = 'ananke'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[params]
+  description = "Bienvenue sur le site officiel de DJ RESCH"
+  author = "DJ RESCH"
+  ShowReadingTime = false
+  ShowShareButtons = true
+  customCSS = ["css/custom.css"]
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Événements"
+    url = "/events/"
+    weight = 2
+  [[menu.main]]
+    name = "Équipements"
+    url = "/equipement"
+    weight = 3
+  [[menu.main]]
+    name = "Galerie"
+    url = "/gallery/"
+    weight = 4
+  [[menu.main]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 5
