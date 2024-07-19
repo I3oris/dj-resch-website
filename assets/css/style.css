@@ -1,0 +1,50 @@
+/* === Texts === */
+body {
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.avenir {
+  /* Override theme font */
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+/* === Footer === */
+.site-footer {
+  background-color: #1C1C1C;
+  color: #ccc;
+  width: 100%;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.footer-links {
+  margin-bottom: 40px;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.footer-links a {
+  color: #ccc;
+  margin: 0 15px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-social .social-icon {
+  color: #ccc;
+  margin: 0 10px;
+  font-size: 1.5em;
+  transition: color 0.3s;
+}
+
+.footer-social .social-icon:hover {
+  color: #fff;
+}

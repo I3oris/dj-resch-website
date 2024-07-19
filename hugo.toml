@@ -2,6 +2,11 @@ baseURL = 'https://example.org/'
 languageCode = 'fr'
 title = 'DJ RESCH'
 theme = 'ananke'
+enableEmoji = true
+# enableRobotsTXT = true
+# canonifyURLs = true
+# paginate = 9
+# enableInlineShortcodes = true
 
 [markup]
   [markup.goldmark]
@@ -14,7 +19,12 @@ theme = 'ananke'
   ShowReadingTime = false
   ShowShareButtons = false
   customCSS = ["css/custom.css"]
-
+  [params.Social_media.Facebook]
+    Url = "https://example.com"
+  [params.Social_media.Instagram]
+    Url = "https://example.com"
+  [params.Social_media.Twitter]
+    Url = "https://example.com"
 
 [menu]
   [[menu.main]]

@@ -1,0 +1,12 @@
+<footer class="site-footer">
+  <div class="footer-links">
+    {{ range site.Menus.main }}
+      <a href="{{ .URL | absLangURL }}" class="">{{ .Name }}</a>
+    {{ end }}
+  </div>
+  <div class="footer-social">
+    <a href="{{ $.Site.Params.Social_media.Facebook.Url }}" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+    <a href="{{ $.Site.Params.Social_media.Twitter.Url }}" class="social-icon"><i class="fab fa-twitter"></i></a>
+    <a href="{{ $.Site.Params.Social_media.Instagram.Url }}" class="social-icon"><i class="fab fa-instagram"></i></a>
+  </div>
+</footer>
