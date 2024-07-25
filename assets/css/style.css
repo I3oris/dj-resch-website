@@ -11,35 +11,6 @@ body {
   font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-/* ===  General === */
-.content-row {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 80px;
-  padding: 80px;
-}
-
-.image-container {
-  flex: 0 0 auto;
-}
-
-.text-container {
-  max-width: 600px;
-}
-
-.text-container h2 {
-  color: #ddd;
-  font-size: 3rem;
-  margin-bottom: 40px;
-}
-
-.text-container p {
-  color: #ddd;
-  font-size: 1.25rem;
-  margin-bottom: 15px;
-}
-
 /* ===  Header === */
 .resch-image-container {
   flex: 0 0 auto;
@@ -53,6 +24,50 @@ body {
   margin-bottom: 0px;
 }
 
+/* ===  Home === */
+.home-text-container {
+  max-width: 600px;
+}
+
+.home-text-container h2 {
+  color: #ddd;
+  font-size: 3rem;
+  margin-bottom: 40px;
+}
+
+.home-text-container p {
+  color: #ddd;
+  font-size: 1.25rem;
+  margin-bottom: 15px;
+}
+
+.home-content-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 80px;
+  padding: 80px;
+}
+
+.home-image-container {
+  flex: 0 0 auto;
+}
+
+@media (max-width: 768px) {
+  .home-image {
+    width: 300px;
+  }
+
+  .home-content-row {
+    flex-direction: column;
+    align-items: center;
+
+    gap: 20px;
+    padding: 10px;
+    padding-top: 40px;
+  }
+}
+
 /* === Image === */
 .styled-image {
   border-radius: 15px;
@@ -63,6 +78,7 @@ body {
 .styled-image:hover {
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
+
 /* === Galery === */
 .gallery {
   display: grid;
@@ -182,6 +198,18 @@ body {
 
 .read-more-button:hover {
   background-color: #9d32ff;
+}
+
+@media (max-width: 768px) {
+  .events-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .event-card {
+    margin-bottom: 20px;
+  }
 }
 
 /* === Pagination === */

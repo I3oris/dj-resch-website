@@ -1,13 +1,13 @@
 {{ define "main" }}
-  <div class="content-row">
+  <div class="home-content-row">
     {{ $image := resources.Get "images/dj-photo.jpg" }}
     {{ with $image }}
       {{ $resized := .Resize "500x500" }}
-      <div class="image-container">
-        <img class="styled-image" src="{{ $resized.Permalink }}" alt="photo" class="styled-image">
+      <div class="home-image-container">
+        <img class="home-image styled-image" src="{{ $resized.Permalink }}" alt="photo">
       </div>
     {{ end }}
-    <div class="text-container">
+    <div class="home-text-container">
       <h2>{{.Site.Params.presentation.title}}</h2>
       {{ range .Site.Params.presentation.text }}
         <p>{{ . }}</p>
