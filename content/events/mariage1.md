@@ -1,6 +1,8 @@
 ---
 title: "Mariage 1"
-date: 2024-07-10
+date: 2023-07-31
 image: "images/event1.jpg"
 ---
 Description du mariage 1.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
