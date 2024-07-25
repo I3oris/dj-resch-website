@@ -48,3 +48,82 @@ body {
 .footer-social .social-icon:hover {
   color: #fff;
 }
+
+/* === Contact === */
+
+
+.contact-page-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.contact-container {
+  width: 100%;
+  max-width: 650px;
+  padding: 20px;
+}
+
+.contact-container h1 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+}
+
+.form-group label {
+  color: #ddd;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #3b3b3b;
+  color: #ddd;
+  height: 50px;
+}
+.form-group textarea {
+  height: 200px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+textarea {
+  resize: vertical;
+}
+
+.submit-button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(45deg, #6b23d7, #9d32ff);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-button:hover {
+  background: linear-gradient(45deg, #9d32ff, #6b23d7);
+}
