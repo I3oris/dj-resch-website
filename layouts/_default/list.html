@@ -1,0 +1,15 @@
+{{ define "main" }}
+  <!-- from themes/anake -->
+  <!-- Here is defined layout for regular page in the menu -->
+  <article class="pa3 pa4-ns nested-copy-line-height">
+    <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy {{ $.Param "text_color" | default "white" }}">
+      {{- .Content -}}
+    </section>
+    <section class="events-container">
+      {{ range .Paginator.Pages }}
+          {{ .Render "summary" }}
+      {{ end }}
+    </section>
+    {{ partial "site-pagination.html" . }}
+  </article>
+{{ end }}

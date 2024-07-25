@@ -1,0 +1,22 @@
+{{ define "main" }}
+  <div class="content-row">
+    {{ $image := resources.Get "images/dj-photo.jpg" }}
+    {{ with $image }}
+      {{ $resized := .Resize "500x500" }}
+      <div class="image-container">
+        <img src="{{ $resized.Permalink }}" alt="Example Image" class="styled-image">
+      </div>
+    {{ end }}
+    <div class="text-container">
+      <h2>{{.Site.Params.presentation.title}}</h2>
+      {{ range .Site.Params.presentation.text }}
+        <p>{{ . }}</p>
+      {{ end }}
+    </div>
+  </div>
+
+  <article class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy {{ $.Param "text_color" | default "white" }}">
+    {{ .Content }}
+  </article>
+{{end}}
+

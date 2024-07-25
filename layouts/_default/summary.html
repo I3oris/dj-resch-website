@@ -1,0 +1,15 @@
+<div class="event-card">
+  {{ with .Params.image }}
+  {{ $image := resources.Get . }}
+  {{ with $image }}
+    {{ $resized := .Fit "300x200" }}
+    <img src="{{ $resized.Permalink }}" alt="Event {{ . }}" class="event-image">
+  {{ end }}
+  {{ end }}
+  <div class="event-content">
+    <a href="{{.RelPermalink}}" class="event-title">{{ .Title }}</a>
+    <p>{{ .Summary }}</p>
+    <p class="event-date">Date: {{ .Date.Format "02 January 2006" }}</p>
+    <a href="{{.RelPermalink}}" class="read-more-button">En savoir plus</a>
+  </div>
+</div>

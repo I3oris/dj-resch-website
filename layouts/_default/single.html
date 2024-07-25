@@ -1,10 +1,10 @@
-<!-- from themes/anake -->
 {{ define "header" }}
    {{/* We can override any block in the baseof file be defining it in the template */}}
   {{ partial "page-header.html" . }}
 {{ end }}
 
 {{ define "main" }}
+  <!-- Here is defined layout for event page -->
   {{ $section := .Site.GetPage "section" .Section }}
   <article class="flex-l flex-wrap justify-between mw8 center ph3">
     <header class="mt4 w-100">

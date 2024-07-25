@@ -1,31 +1,8 @@
 ---
 title: "DJ RESCH"
 ---
-![DJ Photo](images/dj-photo.jpg)
-
-<!-- DJ RESCH est un DJ renommé avec une passion pour la musique électronique. Il a mixé dans les plus grands clubs et festivals du monde entier. -->
-## A propos
-
-Age : 24 Ans
-
-Langues : Francais & Anglais courant
-
-Mobilité : Permis internationnal & Passeport
-
-Style Musical : GÉNÉRALISTE
-
-Influences : Bass House, Brazilian Bass, Deep House, Hip-Hop, Trap, Actu, EDM, Psy Trance, Urban, retro, 80's/90's/00's.
 
 ## Adrien Resch - Disc Jockey & Producteur
-
-<div style="text-align: center; margin-top: 20px;">
-  <a href="https://example.com" target="_blank">Facebook</a> |
-  <a href="https://example.com" target="_blank">Twitter</a> |
-  <a href="https://example.com" target="_blank">Linkedin</a> |
-  <a href="https://example.com" target="_blank">youtube</a> |
-  <a href="https://example.com" target="_blank">Instagram</a> |
-  <a href="https://example.com" target="_blank">TikTok</a>
-</div>
 
 Dj depuis 2014, je suis originaire de Toulouse.
 
