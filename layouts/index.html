@@ -4,7 +4,7 @@
     {{ with $image }}
       {{ $resized := .Resize "500x500" }}
       <div class="image-container">
-        <img src="{{ $resized.Permalink }}" alt="Example Image" class="styled-image">
+        <img class="styled-image" src="{{ $resized.Permalink }}" alt="photo" class="styled-image">
       </div>
     {{ end }}
     <div class="text-container">
