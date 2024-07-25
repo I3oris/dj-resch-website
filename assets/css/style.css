@@ -9,12 +9,16 @@ body {
 
 .avenir {
   font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 200;
 }
 
 /* ===  Header === */
 .resch-image-container {
   flex: 0 0 auto;
+  padding-left: 80px;
+  padding-right: 80px;
 }
+
 
 .header-title {
   color: #ddd;
@@ -22,6 +26,12 @@ body {
   font-size: 3rem;
   margin-top: 50px;
   margin-bottom: 0px;
+}
+
+@media (max-width: 768px) {
+  .header-title {
+    margin-top: 20px;
+  }
 }
 
 /* ===  Home === */

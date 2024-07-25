@@ -18,16 +18,16 @@
   </header>
 {{ else }}
   <header>
-    <div class="pb3-m pb6-l {{ .Site.Params.background_color_class | default "bg-black" }}">
+    <div class="pb3-m pb4-l {{ .Site.Params.background_color_class | default "bg-black" }}">
       {{ partial "site-navigation.html" . }}
 
 
       <div class="tc-l pv3 ph3 ph4-ns">
         {{ $image := resources.Get "images/resch.png" }}
         {{ with $image }}
-          {{ $resized := .Fit "500x500" }}
+          {{ $resized := .Fit "400x400" }}
           <div class="resch-image-container">
-            <img src="{{ $resized.Permalink }}" alt="Example Image" class="resch-image">
+            <img src="{{ $resized.Permalink }}" alt="logo" class="resch-image">
           </div>
         {{ end }}
         <!-- <h1 class="f2 f-subheadline-l fw2 light-silver mb0 lh-title"> -->
