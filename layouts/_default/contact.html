@@ -4,7 +4,9 @@
       <div class="nested-copy-line-height lh-copy f4 nested-links {{ $.Param "text_color" | default "white" }}">
         {{ .Content }}
       </div>
-      <form action="https://formspree.io/f/{your-form-id}" method="post" class="contact-form">
+
+      <!-- <form action="https://formspree.io/f/{your-form-id}" method="post" class="contact-form"> -->
+      <form id="contactForm" class="contact-form">
         <div class="form-group">
           <label for="email">Votre Email:</label>
           <input type="email" id="email" name="email" placeholder="nom@example.com" required>
@@ -19,6 +21,25 @@
         </div>
         <button type="submit" class="submit-button">Envoyer</button>
       </form>
+
+      <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+          event.preventDefault(); // Prevent the default form submission
+
+          // Get form values
+          var email = document.getElementById('email').value;
+          var subject = document.getElementById('subject').value;
+          var message = document.getElementById('message').value;
+
+          // Construct the mailto link
+          var mailtoLink = 'mailto:{{ .Site.Params.email }}?subject=' + encodeURIComponent(subject) +
+                           '&body=' + encodeURIComponent(message + '\n\n' + email + '\n');
+
+          // Redirect to the mailto link
+          window.location.href = mailtoLink;
+        });
+      </script>
+
     </div>
   </div>
 {{ end }}
