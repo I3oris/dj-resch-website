@@ -17,6 +17,7 @@ enableEmoji = true
   description = "Bienvenue sur le site officiel de DJ RESCH"
   author = "DJ RESCH"
   customCSS = ["css/custom.css"]
+  favicon = "favicon/favicon-32x32.png"
   [params.Social_media.Facebook]
     Url = "https://example.com"
   [params.Social_media.Instagram]
