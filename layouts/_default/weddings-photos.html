@@ -1,0 +1,13 @@
+{{ define "main" }}
+  <section class="gallery">
+    {{ $images := readDir "assets/images/wedding-photos" }}
+    {{ range $images }}
+      {{ $image := resources.Get (printf "images/wedding-photos/%s" .Name) }}
+      {{ with $image }}
+        <a class="gallery-item" href="{{ .Permalink }}">
+          <img src="{{ .Permalink }}" alt="{{ .Name | plainify }}" class="styled-image">
+        </a>
+      {{ end }}
+    {{ end }}
+  </section>
+{{ end }}

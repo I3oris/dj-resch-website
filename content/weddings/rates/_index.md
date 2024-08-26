@@ -1,0 +1,4 @@
+---
+title: "Avis"
+layout: "rates"
+---
