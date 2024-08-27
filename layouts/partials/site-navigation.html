@@ -55,22 +55,12 @@
         });
       }
 
-      // Toggle submenu display on click
-      function toggleSubmenu(event) {
-        if (event.target.closest(".submenu-item")) return;
-
-        event.preventDefault(); // Prevent default click behavior
-        const submenu = this.querySelector(".submenu-list");
-        if (submenu) {
-          const isVisible = submenu.style.display === "block";
-
-          closeAllSubmenus(); // Close all open submenus first
-          submenu.style.display = isVisible ? "none" : "block"; // Toggle display
-        }
-      }
-
       // Show submenu on hover
       function showSubmenu(event) {
+        if (event.target.closest(".submenu-item")) return;
+
+        event.preventDefault();
+
         const submenu = this.querySelector(".submenu-list");
         if (submenu) {
           submenu.style.display = "block";
@@ -99,7 +89,7 @@
       // Add click event listener to all dropdowns
       const dropdowns = document.querySelectorAll(".menu-dropdown");
       dropdowns.forEach(dropdown => {
-        dropdown.addEventListener("click", toggleSubmenu);
+        dropdown.addEventListener("click", showSubmenu);
         dropdown.addEventListener("mouseenter", showSubmenu);
         dropdown.addEventListener("mouseleave", hideSubmenu);
       });
