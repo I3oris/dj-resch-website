@@ -1,4 +1,12 @@
 {{ define "main" }}
+  {{ $image := resources.Get "images/dj-background.jpg" }}
+  {{ with $image }}
+    {{ $resized := .Resize "x650" }}
+    <div class="dj-background-image-container">
+      <img class="dj-background-image" src="{{ $resized.Permalink }}" alt="dj-background-image">
+    </div>
+  {{ end }}
+
   <div class="home-content-row">
     {{ $image := resources.Get "images/dj-photo.jpg" }}
     {{ with $image }}
@@ -7,6 +15,7 @@
         <img class="home-image styled-image" src="{{ $resized.Permalink }}" alt="photo">
       </div>
     {{ end }}
+
     <div class="home-text-container">
       <h2>{{.Site.Params.presentation.title}}</h2>
       {{ range .Site.Params.presentation.text }}
@@ -15,7 +24,7 @@
     </div>
   </div>
 
-  <article class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy {{ $.Param "text_color" | default "white" }}">
+  <article class="home-text-container cf ph3 ph3-l pv1 pv4-l f4 tc-l center measure-wide lh-copy white">
     {{ .Content }}
   </article>
 {{end}}

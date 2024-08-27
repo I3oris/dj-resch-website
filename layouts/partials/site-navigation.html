@@ -64,6 +64,10 @@
         const submenu = this.querySelector(".submenu-list");
         if (submenu) {
           submenu.style.display = "block";
+          setTimeout(() => {
+            submenu.style.opacity = 1;
+            submenu.style.transform = "translateY(0)";
+          }, 10);
         }
       }
 
@@ -71,6 +75,8 @@
       function hideSubmenu(event) {
         const submenu = this.querySelector(".submenu-list");
         if (submenu) {
+          submenu.style.opacity = 0;
+          submenu.style.transform = "translateY(-10px)";
           submenu.style.display = "none";
         }
       }

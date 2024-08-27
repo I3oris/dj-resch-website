@@ -18,22 +18,35 @@
   </header>
 {{ else }}
   <header>
-    <div class="pb3-m pb4-l {{ .Site.Params.background_color_class | default "bg-black" }}">
+    <div class="pb3-m pb4-l bg-black header">
       {{ partial "site-navigation.html" . }}
-
+      {{ $isHome := eq .Title "DJ RESCH" }}
 
       <div class="tc-l pv3 ph3 ph4-ns">
         {{ $image := resources.Get "images/resch.png" }}
-        {{ with $image }}
-          {{ $resized := .Fit "400x400" }}
-          <div class="resch-image-container">
-            <img src="{{ $resized.Permalink }}" alt="logo" class="resch-image">
-          </div>
+
+        {{ if $isHome }}
+          <h1 class="dj-title">
+            DJ
+          </h1>
+          {{ with $image }}
+            {{ $resized := .Fit "400x400" }}
+            <div class="resch-image-container is-home">
+              <img src="{{ $resized.Permalink }}" alt="logo" class="resch-image">
+            </div>
+          {{ end }}
+
+        {{ else }}
+          {{ with $image }}
+            {{ $resized := .Fit "400x400" }}
+            <div class="resch-image-container">
+              <img src="{{ $resized.Permalink }}" alt="logo" class="resch-image">
+            </div>
+          {{ end }}
+          <h1 class="header-title">
+            {{ .Title | default .Site.Title }}
+          </h1>
         {{ end }}
-        <!-- <h1 class="f2 f-subheadline-l fw2 light-silver mb0 lh-title"> -->
-        <h1 class="header-title">
-          {{ .Title | default .Site.Title }}
-        </h1>
         {{ with .Params.description }}
           <h2 class="fw1 f5 f3-l white-80 measure-wide-l center lh-copy mt3 mb4">
             {{ . }}
