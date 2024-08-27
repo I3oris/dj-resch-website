@@ -7,11 +7,11 @@
         {{ .Site.Title }}
       {{ end }}
     </a>
-  <div class="flex-l items-center">
-    {{ partial "i18nlist.html" . }}
-    <nav class="menu">
-      <ul class="menu-list">
-        {{ $currentNode := . }}
+    <div class="flex-l items-center">
+      {{ partial "i18nlist.html" . }}
+      <nav class="menu">
+        <ul class="menu-list">
+          {{ $currentNode := . }}
           {{ range .Site.Menus.main }}
             {{ if .Name }}
               {{ if .HasChildren }}
@@ -22,7 +22,7 @@
                   </a>
                   <ul class="submenu-list">
                     {{ range .Children }}
-                      <li class="menu-item">
+                      <li class="menu-item submenu-item">
                         <a class="menu-link" href="{{ .URL }}">{{ .Name }}</a>
                       </li>
                     {{ end }}
@@ -39,5 +39,80 @@
       </nav>
       {{ partialCached "social-follow.html" . }}
     </div>
+  </div>
 
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Function to set the submenu width
+      function setSubmenuWidth() {
+        const dropdowns = document.querySelectorAll(".menu-dropdown");
+
+        dropdowns.forEach(dropdown => {
+          const submenu = dropdown.querySelector(".submenu-list");
+          if (submenu) {
+            submenu.style.minWidth = `${dropdown.offsetWidth}px`; // Set width of submenu to match parent
+          }
+        });
+      }
+
+      // Toggle submenu display on click
+      function toggleSubmenu(event) {
+        if (event.target.closest(".submenu-item")) return;
+
+        event.preventDefault(); // Prevent default click behavior
+        const submenu = this.querySelector(".submenu-list");
+        if (submenu) {
+          const isVisible = submenu.style.display === "block";
+
+          closeAllSubmenus(); // Close all open submenus first
+          submenu.style.display = isVisible ? "none" : "block"; // Toggle display
+        }
+      }
+
+      // Show submenu on hover
+      function showSubmenu(event) {
+        const submenu = this.querySelector(".submenu-list");
+        if (submenu) {
+          submenu.style.display = "block";
+        }
+      }
+
+      // Hide submenu on mouse leave
+      function hideSubmenu(event) {
+        const submenu = this.querySelector(".submenu-list");
+        if (submenu) {
+          submenu.style.display = "none";
+        }
+      }
+
+      // Close all submenus
+      function closeAllSubmenus() {
+        const submenus = document.querySelectorAll(".submenu-list");
+        submenus.forEach(submenu => {
+          submenu.style.display = "none";
+        });
+      }
+
+      // Set initial submenu width
+      setSubmenuWidth();
+
+      // Add click event listener to all dropdowns
+      const dropdowns = document.querySelectorAll(".menu-dropdown");
+      dropdowns.forEach(dropdown => {
+        dropdown.addEventListener("click", toggleSubmenu);
+        dropdown.addEventListener("mouseenter", showSubmenu);
+        dropdown.addEventListener("mouseleave", hideSubmenu);
+      });
+
+      // Adjust submenu width on window resize
+      window.addEventListener("resize", setSubmenuWidth);
+
+      // Close submenus when clicking outside
+      document.addEventListener("click", function (event) {
+        if (!event.target.closest(".menu-dropdown")) {
+          closeAllSubmenus();
+        }
+      });
+    });
+  </script>
 </nav>

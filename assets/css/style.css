@@ -429,13 +429,3 @@ textarea {
 .submenu-list .menu-item {
   padding: 5px;
 }
-
-.menu-list .menu-item:hover > .submenu-list,
-.menu-list .menu-item:focus-within > .submenu-list,
-.menu-list .menu-item .submenu-list:hover,
-.menu-list .menu-item .submenu-list:focus {
-  visibility: visible;
-  opacity: 1;
-  display: block;
-}
-
