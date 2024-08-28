@@ -1,11 +1,11 @@
 {{ define "main" }}
   <article class="pa3 pa4-ns nested-copy-line-height">
-    <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy {{ $.Param "text_color" | default "white" }}">
+    <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy white">
       {{- .Content -}}
     </section>
-    <section class="rates-container">
+    <section class="musics-container">
       {{ range .Paginator.Pages }}
-          {{ .Render "rate-item" }}
+          {{ .Render "music-item" }}
       {{ end }}
     </section>
     {{ partial "site-pagination.html" . }}

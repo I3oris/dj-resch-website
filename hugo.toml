@@ -61,10 +61,10 @@ enableEmoji = true
   #     name = "Cours de DJing"
   #     url = "/dj/djing"
   #     weight = 3
-  # [[menu.main]]
-  #   name = "Musiques"
-  #   url = "/musics"
-  #   weight = 3
+  [[menu.main]]
+    name = "Musiques"
+    url = "/musics"
+    weight = 3
   [[menu.main]]
     identifier = "wedding"
     name = "Mariages"
