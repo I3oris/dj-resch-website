@@ -1,13 +1,48 @@
 {{ define "main" }}
-  <section class="gallery">
-    {{ $images := readDir "assets/images/wedding-photos" }}
-    {{ range $images }}
-      {{ $image := resources.Get (printf "images/wedding-photos/%s" .Name) }}
-      {{ with $image }}
+  {{ $image_files := readDir "assets/images/wedding-photos" }}
+  {{ $images := slice }}
+  {{ range $image_files }}
+    {{ $images = $images | append (resources.Get (printf "images/wedding-photos/%s" .Name)) }}
+  {{ end }}
+
+  {{ $images_col1 := slice }}
+  {{ $images_col2 := slice }}
+  {{ $height1 := 0 }}
+  {{ $height2 := 0 }}
+
+  {{ range $images }}
+    {{ if lt $height2 $height1 }}
+      {{ $height2 = add $height2 (div .Height (.Width | float) ) }}
+      {{ $images_col2 = $images_col2 | append . }}
+    {{ else }}
+      {{ $height1 = add $height1 (div .Height (.Width | float) ) }}
+      {{ $images_col1 = $images_col1 | append . }}
+    {{ end }}
+  {{ end }}
+  <section>
+    <div class="gallery-one-column">
+     {{ range $images }}
         <a class="gallery-item" href="{{ .Permalink }}">
           <img src="{{ .Permalink }}" alt="{{ .Name | plainify }}" class="styled-image">
         </a>
       {{ end }}
-    {{ end }}
+    </div>
+
+    <div class="gallery">
+      <div class="column" id="column1">
+      {{ range $images_col1 }}
+        <a class="gallery-item" href="{{ .Permalink }}">
+          <img src="{{ .Permalink }}" alt="{{ .Name | plainify }}" class="styled-image">
+        </a>
+      {{ end }}
+      </div>
+      <div class="column" id="column2">
+      {{ range $images_col2 }}
+        <a class="gallery-item" href="{{ .Permalink }}">
+          <img src="{{ .Permalink }}" alt="{{ .Name | plainify }}" class="styled-image">
+        </a>
+      {{ end }}
+      </div>
+    </div>
   </section>
 {{ end }}

@@ -16,7 +16,6 @@
   .resch-image-container {
     padding-left: 80px;
     padding-right: 80px;
-    background-color: black;
   }
 
   .header {
@@ -58,6 +57,50 @@
     .header-title {
       margin-top: 20px;
     }
+  }
+
+/* === Navigation Menu === */
+
+  .menu-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .submenu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: #161616;
+    position: absolute;
+    min-width: 150px;
+
+    display: none;
+    border-radius: 15px;
+
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+
+
+  .menu-link {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #ddd;
+  }
+
+  .menu-link:hover {
+    color: goldenrod;
+  }
+
+  .submenu-list .menu-item {
+    padding: 5px;
   }
 
 /* === Home === */
@@ -126,29 +169,47 @@
 /* === Image === */
   .styled-image {
     border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease;
+    transition: box-shadow 3s ease;
   }
 
   .styled-image:hover {
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 3px #DAA52055, 0 0 100px #DAA52022;
+    transition: box-shadow 0.3s ease;
   }
 
 /* === Photos Gallery === */
-  .gallery {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+
+  .gallery-one-column {
+    display: none;
+    grid-template-columns: 1fr;
     gap: 40px;
     padding: 80px;
     max-width: 1200px;
     margin: auto;
   }
 
+  .gallery {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 80px;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .column {
+    flex: 1;
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
   @media (max-width: 768px) {
+    .gallery-one-column {
+      display: grid;
+    }
     .gallery {
-      grid-template-columns: 1fr;
-      gap: 40px;
-      padding: 40px;
+      display: none;
     }
   }
 
@@ -173,7 +234,7 @@
   }
 
   .footer-links a:hover {
-    color: #fff;
+    color: goldenrod;
   }
 
   .footer-social {
@@ -189,7 +250,24 @@
   }
 
   .footer-social .social-icon:hover {
-    color: #fff;
+    color: goldenrod;
+  }
+
+/* === Cards === */
+
+  .card {
+    background-color: #2c2c2c;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 1s ease, background-color 0.3s ease;
+  }
+
+  .card:hover {
+    background-color: #2e2e2e;
+    transform: translateY(-10px);
+    box-shadow: 0 0 3px #DAA5207f;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
   }
 
 /* === Events List === */
@@ -210,18 +288,6 @@
     padding: 20px;
     max-width: 1200px;
     margin: auto;
-  }
-
-  .event-card {
-    background-color: #2c2c2c;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    transition: transform 0.3s ease;
-  }
-
-  .event-card:hover {
-    transform: translateY(-10px);
   }
 
   .event-image {
@@ -254,15 +320,15 @@
   .read-more-button {
     display: inline-block;
     padding: 8px 15px;
-    background-color: #6b23d7;
+    background-color: darkgoldenrod;
     color: #fff;
     border-radius: 5px;
     text-decoration: none;
-    transition: background-color 0.3s ease;
   }
 
   .read-more-button:hover {
-    background-color: #9d32ff;
+    background: linear-gradient(45deg, darkgoldenrod, goldenrod);
+    transition: background 3s ease;
   }
 
   @media (max-width: 768px) {
@@ -286,18 +352,6 @@
     padding: 20px;
     max-width: 1200px;
     margin: auto;
-  }
-
-  .rate-card {
-    background-color: #2c2c2c;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    transition: transform 0.3s ease;
-  }
-
-  .rate-card:hover {
-    transform: translateY(-10px);
   }
 
   .rate-content {
@@ -347,19 +401,6 @@
     margin: auto;
   }
 
-
-  .music-card {
-    background-color: #2c2c2c;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    transition: transform 0.3s ease;
-  }
-
-  .music-card:hover {
-    transform: translateY(-10px);
-  }
-
   .music-content {
     padding: 15px;
     padding-top: 5px;
@@ -394,11 +435,11 @@
   }
 
   .pagination-button:hover {
-    background-color: #6b23d7;
+    background-color: darkgoldenrod;
   }
 
   .pagination-button.current {
-    background-color: #9d32ff;
+    background-color: goldenrod;
     cursor: default;
   }
 
@@ -457,7 +498,8 @@
   .form-group input:focus,
   .form-group textarea:focus {
     outline: none;
-    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 5px #DAA520ff;
+    transition: box-shadow 0.3s ease;
   }
 
   textarea {
@@ -469,7 +511,7 @@
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    background: linear-gradient(45deg, #6b23d7, #9d32ff);
+    background: linear-gradient(45deg, darkgoldenrod, goldenrod);
     color: #fff;
     font-weight: bold;
     cursor: pointer;
@@ -477,50 +519,32 @@
   }
 
   .submit-button:hover {
-    background: linear-gradient(45deg, #9d32ff, #6b23d7);
+    background: linear-gradient(45deg, goldenrod, darkgoldenrod);
   }
 
-/* === Navigation Menu === */
+/* === 404 === */
 
-  .menu-list {
+  .page404 {
     display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    align-items: center;
+    padding: 20px;
+    flex-direction: column;
   }
 
-  .submenu-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    background: #161616;
-    position: absolute;
-    min-width: 150px;
-
-    display: none;
-    border-radius: 15px;
-
-    opacity: 0;
-    transform: translateY(-10px);
-    transition: opacity 0.2s ease, transform 0.2s ease;
+  .page404-image-container {
+    width: 600px;
+    animation: fadeInDown 1s ease forwards;
   }
 
+  @media (max-width: 768px) {
+    .page404-image-container {
+      width: 400px;
+    }
+  }
 
-  .menu-link {
-    display: block;
-    padding: 10px;
-    text-decoration: none;
-    font-size: 1.25rem;
-    font-weight: 400;
+  .page404-credit-link {
     color: #ddd;
+    margin: 0 15px;
+    text-decoration: none;
+    transition: color 0.3s;
   }
-
-  .menu-link:hover {
-    color: #fff;
-  }
-
-  .submenu-list .menu-item {
-    padding: 5px;
-  }
-

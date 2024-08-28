@@ -14,6 +14,7 @@ enableEmoji = true
       unsafe = true
 
 [params]
+  site_logo = "favicon/favicon-32x32.png"
   description = "Bienvenue sur le site officiel de DJ RESCH"
   author = "DJ RESCH"
   email = "djreschbooking@gmail.com"

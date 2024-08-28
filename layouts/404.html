@@ -1,0 +1,13 @@
+{{ define "header" }}{{ partial "page-header.html" . }}{{ end }}
+{{ define "main" }}
+  <article class="page404">
+    {{ $image := resources.Get "images/404.png" }}
+    {{ with $image }}
+      {{ $resized := .Resize "800x" }}
+      <div class="page404-image-container">
+        <img src="{{ $resized.Permalink }}" alt="Error 404 Page not found" class="page404-image">
+      </div>
+    {{ end }}
+    <a class="page404-credit-link" href="http://www.freepik.com">Designed by Freepik</a>
+  </article>
+{{ end }}
