@@ -445,7 +445,6 @@
     font-style: normal;
   }
 
-
   .wedding {
     background-color: #f0ddd5;
     padding-bottom: 240px;
@@ -508,19 +507,6 @@
     padding: 125px;
     border: 1px solid #ccA196;
     border-radius: 500px 500px 5px 5px;
-  }
-
-  @media (max-width: 768px) {
-    .wedding-card {
-      width: 90%;
-    }
-
-    .wedding-card-inner {
-      padding-left: 50px;
-      padding-right: 50px;
-      margin-left: 100px;
-      margin-right: 100px;
-    }
   }
 
   .wedding-card h1 {
@@ -629,6 +615,17 @@
 
   .wedding-contact-button:hover {
     background: linear-gradient(45deg, goldenrod, darkgoldenrod);
+  }
+
+  @media (max-width: 768px) {
+    .wedding-card {
+      width: 90%;
+      padding: 10px;
+    }
+
+    .wedding-card-inner {
+      padding: 200px 10px 300px 10px;
+    }
   }
 
 /* === Pagination === */
