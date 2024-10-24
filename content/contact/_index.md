@@ -3,7 +3,7 @@ title: "Contact"
 type: "contact"
 ---
 
-Contacter moi
+Contacter DJ Resch
 <!--
 ### Booking et Management
 

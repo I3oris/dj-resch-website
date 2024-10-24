@@ -37,6 +37,9 @@ enableEmoji = true
       "Influences : Bass House, Brazilian Bass, Deep House, Hip-Hop, Trap, Actu, EDM, Psy Trance, Urban, retro, 80's/90's/00's.",
     ]
 
+  [params.weddingsService]
+    link = "https://www.mariages.net/musique-mariage/resch--e316860"
+
 [menu]
   [[menu.main]]
     name = "Home"

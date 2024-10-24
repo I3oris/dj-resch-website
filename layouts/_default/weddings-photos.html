@@ -1,8 +1,14 @@
 {{ define "main" }}
-  {{ $image_files := readDir "assets/images/wedding-photos" }}
+  {{ $filter := images.GaussianBlur 5 }}
+
+  {{ $background := resources.Get "images/wedding/background.jpg" }}
+  {{ $background := $background.Resize "x4000" }}
+  {{ $background := $background | images.Filter $filter }}
+
+  {{ $image_files := readDir "assets/images/wedding/photos" }}
   {{ $images := slice }}
   {{ range $image_files }}
-    {{ $images = $images | append (resources.Get (printf "images/wedding-photos/%s" .Name)) }}
+    {{ $images = $images | append (resources.Get (printf "images/wedding/photos/%s" .Name)) }}
   {{ end }}
 
   {{ $images_col1 := slice }}
@@ -19,7 +25,7 @@
       {{ $images_col1 = $images_col1 | append . }}
     {{ end }}
   {{ end }}
-  <section>
+  <section id="wedding" class="wedding" style="background-image: url({{ $background.Permalink }});">
     <div class="gallery-one-column">
      {{ range $images }}
         <a class="gallery-item" href="{{ .Permalink }}">
@@ -44,5 +50,16 @@
       {{ end }}
       </div>
     </div>
-  </section>
+  </div>
+  <script type="text/javascript">
+    window.addEventListener('scroll', function() {
+      var scrollPosition = window.scrollY;
+
+      var newBackgroundPositionY = - scrollPosition * 0.5;
+
+      document.querySelectorAll('.wedding').forEach(function(element) {
+          element.style.backgroundPositionY = `${newBackgroundPositionY}px`;
+      });
+    });
+  </script>
 {{ end }}

@@ -2,8 +2,9 @@
   {{ $image := resources.Get "images/dj-background.jpg" }}
   {{ with $image }}
     {{ $resized := .Resize "x650" }}
+    <div class="warning">Ce site est en cours de construction. Les informations qu'il s'y trouve sont à titre d’exemple et ne sont pas à jour ou ne correspondent pas à DJ Resch.</div>
     <div class="dj-background-image-container">
-      <img class="dj-background-image" src="{{ $resized.Permalink }}" alt="dj-background-image">
+      <img class="dj-background-image" src="{{ $resized.Permalink }}" alt="dj-background-image"/>
     </div>
   {{ end }}
 
@@ -12,7 +13,7 @@
     {{ with $image }}
       {{ $resized := .Resize "500x500" }}
       <div class="home-image-container">
-        <img class="home-image styled-image" src="{{ $resized.Permalink }}" alt="photo">
+        <img class="home-image styled-image" src="{{ $resized.Permalink }}" alt="photo"/>
       </div>
     {{ end }}
 

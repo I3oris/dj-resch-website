@@ -88,15 +88,18 @@
 
   .menu-link {
     display: block;
-    padding: 10px;
+    padding: 15px;
     text-decoration: none;
     font-size: 1.25rem;
     font-weight: 400;
     color: #ddd;
+    transition: transform 0.1s ease;
   }
 
   .menu-link:hover {
     color: goldenrod;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
   }
 
   .submenu-list .menu-item {
@@ -104,9 +107,16 @@
   }
 
 /* === Home === */
+  .warning {
+    background-color: orange;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 50px;
+  }
+
   .home-text-container {
     max-width: 600px;
-
   }
 
   .home-text-container h2 {
@@ -116,7 +126,6 @@
   }
 
   .home-text-container p {
-
     color: #ddd;
     font-size: 1.25rem;
     margin-bottom: 15px;
@@ -169,12 +178,13 @@
 /* === Image === */
   .styled-image {
     border-radius: 15px;
-    transition: box-shadow 3s ease;
+    transition: box-shadow 3s ease, transform 0.3s ease;
   }
 
   .styled-image:hover {
     box-shadow: 0 0 3px #DAA52055, 0 0 100px #DAA52022;
-    transition: box-shadow 0.3s ease;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    transform: scale(1.05);
   }
 
 /* === Photos Gallery === */
@@ -183,7 +193,7 @@
     display: none;
     grid-template-columns: 1fr;
     gap: 40px;
-    padding: 80px;
+    padding: 20px;
     max-width: 1200px;
     margin: auto;
   }
@@ -194,6 +204,7 @@
     padding-top: 80px;
     max-width: 1200px;
     margin: auto;
+    margin-bottom: 240px;
   }
 
   .column {
@@ -352,6 +363,7 @@
     padding: 20px;
     max-width: 1200px;
     margin: auto;
+    margin-bottom: 240px;
   }
 
   .rate-content {
@@ -399,6 +411,7 @@
     padding: 20px;
     max-width: 1200px;
     margin: auto;
+    margin-bottom: 240px;
   }
 
   .music-content {
@@ -416,11 +429,214 @@
     font-size: 0.9rem;
   }
 
+/* === Weddings Services === */
+
+  @font-face {
+    font-family: 'WeddingFont';
+    src: url('/fonts/wedding-font.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'WeddingTextFont';
+    src: url('/fonts/Please-write-me-a-song.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
+  .wedding {
+    background-color: #f0ddd5;
+    padding-bottom: 240px;
+    display: flex;
+    justify-content: center;
+    font-family: "WeddingTextFont";
+    letter-spacing: 0.1rem;
+
+    background-position: center 0px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+   @media (max-width: 1500px) {
+    .wedding {
+      background-size: 1500px auto;
+    }
+  }
+
+  @media (max-width: 1300px) {
+    .wedding {
+      background-size: 2000px auto;
+    }
+  }
+
+  .wedding-card {
+    position: relative;
+    background-color: #F3EFF1;
+
+    padding: 50px;
+    margin: 100px;
+    width: 1000px;
+    border-radius: 10px;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 1s ease;
+  }
+
+  .wedding-card-border {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+
+    border: 3px solid #ccA196;
+    border-radius: 510px 510px 15px 15px;
+    padding: 10px;
+  }
+
+  .wedding-card-inner {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+
+    padding: 125px;
+    border: 1px solid #ccA196;
+    border-radius: 500px 500px 5px 5px;
+  }
+
+  @media (max-width: 768px) {
+    .wedding-card {
+      width: 90%;
+    }
+
+    .wedding-card-inner {
+      padding-left: 50px;
+      padding-right: 50px;
+      margin-left: 100px;
+      margin-right: 100px;
+    }
+  }
+
+  .wedding-card h1 {
+    width: 300px;
+    color: #52797c;
+    font-family: 'WeddingFont';
+    font-size: 4rem;
+    text-align: center;
+  }
+
+  .wedding-card h2 {
+    color: #52797c;
+    font-size: 1.7rem;
+  }
+
+  .wedding-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .wedding-card h3 {
+    color: #52797c;
+    font-size: 1.4rem;
+  }
+
+  .wedding-card p {
+    color: #52797c;
+    font-size: 1.5rem;
+    padding-bottom: 50px;
+    letter-spacing: 0.1rem;
+  }
+
+ .wedding-card li {
+    color: #52797c;
+    font-size: 1.7rem;
+    padding: 15px;
+    list-style-type: none;
+    text-align: center;
+    min-height: 80px;
+  }
+
+  .wedding-card:hover {
+    box-shadow: 0 0 3px #ccA196;
+    transition: box-shadow 0.3s ease;
+  }
+
+  .flower2-image-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .flower1-image-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  .wedding-li {
+    position: relative;
+    padding: 20px 30px 20px 30px;
+    margin-bottom: 100px;
+    transform: scale(1.0);
+    transition: transform 0.3s ease;
+  }
+
+  .wedding-li:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+  }
+
+  .box1-image {
+    position: absolute;
+    top: 5px;
+    right: 3px;
+  }
+
+  .box2-image {
+    position: absolute;
+    bottom: 5px;
+    left: 3px;
+  }
+
+  .mariage-net-a {
+    text-decoration: none;
+  }
+
+  .mariage-net-a p {
+    padding: 0px;
+    text-align: center;
+  }
+
+  .wedding-contact-button {
+    margin-top: 50px;
+    padding: 10px 20px;
+    font-size: 1.7rem;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(45deg, darkgoldenrod, goldenrod);
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .wedding-contact-button:hover {
+    background: linear-gradient(45deg, goldenrod, darkgoldenrod);
+  }
+
 /* === Pagination === */
   .pagination {
     display: flex;
     justify-content: center;
     margin: 20px 0;
+    margin-bottom: 240px;
   }
 
   .pagination-button {
@@ -450,6 +666,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin-bottom: 240px;
   }
 
   .contact-container {
