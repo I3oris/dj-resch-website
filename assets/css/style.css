@@ -527,6 +527,9 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+
   }
 
   .wedding-card h3 {
@@ -537,7 +540,8 @@
   .wedding-card p {
     color: #52797c;
     font-size: 1.5rem;
-    padding-bottom: 50px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
     letter-spacing: 0.1rem;
   }
 
@@ -548,6 +552,12 @@
     list-style-type: none;
     text-align: center;
     min-height: 80px;
+  }
+
+  .wedding-card ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
 
   .wedding-card:hover {
@@ -570,7 +580,6 @@
   .wedding-li {
     position: relative;
     padding: 20px 30px 20px 30px;
-    margin-bottom: 100px;
     transform: scale(1.0);
     transition: transform 0.3s ease;
   }
@@ -597,7 +606,8 @@
   }
 
   .mariage-net-a p {
-    padding: 0px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     text-align: center;
   }
 
@@ -618,13 +628,18 @@
   }
 
   @media (max-width: 768px) {
+    .wedding {
+      padding-bottom: 0px;
+    }
+
     .wedding-card {
-      width: 90%;
-      padding: 10px;
+      width: 100%;
+      margin: 0px;
+      padding: 20px;
     }
 
     .wedding-card-inner {
-      padding: 200px 10px 300px 10px;
+      padding: 250px 20px 300px 20px;
     }
   }
 

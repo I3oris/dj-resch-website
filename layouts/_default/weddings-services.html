@@ -23,14 +23,18 @@
   {{ $box2 := resources.Get "images/wedding/box2.png" }}
   {{ $box2 := $box2.Resize "x100" }}
 
+  {{ $djWedding := resources.Get "images/wedding/dj-wedding.png" }}
+  {{ $djWedding := $djWedding.Resize "x250" }}
+
+
   <div id="wedding" class="wedding" style="background-image: url({{ $background.Permalink }});">
     <div class="wedding-card">
       <div class="wedding-card-border">
         <div class="wedding-card-inner">
           {{ .Content }}
           <a class="mariage-net-a" href={{.Site.Params.weddingsService.link}}>
-            <p>Voir DJ Resch sur</p>
-            <img class="mariage-net-image" src="{{ $mariageDotNet.Permalink }}" alt="Voir sur mariage.net"/>
+            <p>Retrouver DJ Resch sur</p>
+            <img class="mariage-net-image" src="{{ $mariageDotNet.Permalink }}" alt="Retrouver sur mariage.net"/>
           </a>
           <a class="wedding-contact-button" href="/contact">Contacter</a>
         </div>
@@ -47,6 +51,14 @@
 
   <script type="text/javascript">
     wedding = document.getElementById("wedding");
+
+    var djWedding = document.getElementById('dj-wedding-image');
+    console.log(djWedding);
+    var image = document.createElement('img');
+    image.src = '{{ $djWedding.Permalink }}';
+    image.classList.add('dj-wedding-image');
+    djWedding.appendChild(image);
+
 
     wedding.querySelectorAll('h2').forEach(function(h2) {
         var wrapper = document.createElement('div');
