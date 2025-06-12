@@ -61,6 +61,6 @@
     <main class="" role="main">
       {{ block "main" . }}{{ end }}
     </main>
-    {{ block "footer" . }}{{ partialCached "site-footer.html" . }}{{ end }}
+    {{ block "footer" . }}{{ partial "site-footer.html" . }}{{ end }}
   </body>
 </html>

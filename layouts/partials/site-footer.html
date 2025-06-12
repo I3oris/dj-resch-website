@@ -4,6 +4,92 @@
       <a href="{{ .URL | absLangURL }}" class="">{{ .Name }}</a>
     {{ end }}
   </div>
+  {{ if eq .RelPermalink "/weddings/services/" }}
+    {{ $supplementPage := site.GetPage "footer/supplement.md" }}
+    {{ if $supplementPage }}
+      <h2>{{ $supplementPage.Title }}</h2>
+      <div class="footer-supplement">
+      {{ $supplementPage.Content | safeHTML }}
+      </div>
+    {{ end }}
+    {{ $questionsPage := site.GetPage "footer/questions.md" }}
+    {{ if $questionsPage }}
+      <h2>{{ $questionsPage.Title }}</h2>
+      <div class="footer-questions">
+        <h3></h3>
+        <div class="footer-questions-columns">
+          {{ $html := $questionsPage.Content | safeHTML }}
+          {{ $columns := split $html "</h3>" }}
+
+          {{ range first 2 $columns }}
+            <div class="footer-column">
+              {{ . | safeHTML }}
+            </div>
+          {{ end }}
+        </div>
+      </div>
+    {{ end }}
+    <h2>Témoignages</h2>
+    <div class="footer-reviews">
+      {{ $mariageDotNet := resources.Get "images/wedding/mariage.net-white.svg" }}
+
+      {{ $all := site.RegularPages }}
+      {{ $rates := (slice) }}
+      {{ range $all }}
+        {{ if strings.HasPrefix .Path "/footer/rates" }}
+          {{ $rates = $rates | append . }}
+        {{ end }}
+      {{ end }}
+
+      {{ $average := 0.0 }}
+      {{ range $rates }}
+        {{ $average = add $average .Params.rate }}
+      {{ end }}
+      {{ $average = div $average (len $rates) }}
+      {{ $rateLink := .Site.Params.weddingsServiceRate.link}}
+      <div class="footer-reviews-header">
+
+        <h3>DJ RESCH</h3>
+        <div class="footer-reviews-rate">
+          <div class="review-stars">
+            {{ range seq 1 5 }}
+              <span class="star">★</span>
+            {{ end }}
+          </div>
+          <p>{{ printf "%.1f" $average }} sur 5</p>
+        </div>
+        <p>{{len $rates}} avis</p>
+      </div>
+      {{ range first 3 (sort $rates "Date" "desc") }}
+        <div class="footer-review">
+          <div class="review-author">
+            {{ .Params.author }}
+          </div>
+          <div class="footer-reviews-rate">
+            <div class="review-stars">
+              {{ range seq 1 .Params.rate }}
+                <span class="star">★</span>
+              {{ end }}
+            </div>
+            <p>{{printf "%.1f" (float .Params.rate)}}</p>
+          </div>
+          <div class="review-content">
+            {{ .Content | truncate 240 }}
+          </div>
+          <a href={{$rateLink}} class="footer-see-all-reviews">En savoir plus</a>
+          <div class="review-date">
+            Envoyé le {{ .Date.Format "02/01/2006" }}
+          </div>
+      </div>
+      {{ end }}
+      <a href={{$rateLink}} class="footer-see-all-reviews">Lisez tous nos avis</a>
+      <div>
+        <a class="mariage-net-a" href={{$rateLink}}>
+          <img class="mariage-net-image" src="{{ $mariageDotNet.Permalink }}" alt="Mariage.net"/>
+        </a>
+      </div>
+    </div>
+  {{ end }}
   <div class="footer-social">
     <a href="{{ $.Site.Params.Social_media.Facebook.Url }}" class="social-icon"><i class="fab fa-facebook-f"></i></a>
     <a href="{{ $.Site.Params.Social_media.Twitter.Url }}" class="social-icon"><i class="fab fa-twitter"></i></a>

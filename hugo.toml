@@ -39,6 +39,8 @@ enableEmoji = true
 
   [params.weddingsService]
     link = "https://www.mariages.net/musique-mariage/resch--e316860"
+  [params.weddingsServiceRate]
+    link = "https://www.mariages.net/musique-mariage/resch--e316860/avis"
 
 [menu]
   [[menu.main]]

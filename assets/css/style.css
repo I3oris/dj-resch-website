@@ -231,6 +231,14 @@
     width: 100%;
     padding: 60px 0;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .site-footer  h2 {
+    color: goldenrod;
   }
 
   .footer-links {
@@ -262,6 +270,179 @@
 
   .footer-social .social-icon:hover {
     color: goldenrod;
+  }
+
+  .footer-supplement {
+    max-width: 50rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: left;
+  }
+
+  .footer-supplement h3 {
+    font-weight: 400;
+    padding-bottom: 0rem;
+    /*color: goldenrod;*/
+  }
+  .footer-supplement p {
+    margin-top: 0rem;
+  }
+
+  .footer-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-table tr:first-child td {
+    border-top: none;
+  }
+
+  .footer-table tr:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+
+  .footer-table td {
+    padding: 0.5rem 1rem;
+    color: #fff;
+    font-size: 0.95rem;
+    vertical-align: top;
+    text-align: left;
+  }
+
+  .footer-table .price {
+    text-align: left;
+    white-space: nowrap;
+    font-weight: bold;
+    color: #eee;
+    width: 120px;
+    /*color: goldenrod;*/
+  }
+
+  .footer-questions {
+    max-width: 100rem;
+  }
+
+  .footer-questions p {
+    margin-bottom: 2.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .footer-questions h2 {
+    text-align: center;
+    color: #ddd;
+    margin-bottom: 0rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-align: left;
+  }
+
+  .footer-questions-columns {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .footer-column {
+    flex: 1 1 0;
+    font-size: 1rem;
+    color: #ddd;
+    line-height: 1.5;
+    text-align: left;
+  }
+
+  .footer-reviews {
+    background: #333443;
+    padding: 0px;
+    border-radius: 15px;
+    margin: 2rem;
+    padding-bottom: 1.5rem;
+    max-width: 700px;
+  }
+
+  .footer-reviews-header {
+    background-color: #d6006d;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+
+  .footer-reviews-header p {
+    color: white;
+    margin: 0px;
+    padding: 0px;
+    font-weight: bold;
+  }
+
+  .footer-reviews-rate {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .footer-reviews-rate p {
+    color: white;
+    margin: 0px;
+    padding: 0px;
+    font-weight: 400;
+  }
+
+  .footer-reviews h3 {
+    color: white;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin: 0rem;
+  }
+
+  .footer-review {
+    padding: 2rem;
+    border-bottom: 0.5px solid #8888;
+    align-items: flex-start;
+    padding-top: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .review-author {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  .review-content {
+    text-align: justify;
+    font-size: 1rem;
+    line-height: 1.4;
+    color: #ddd;
+    font-weight: 200;
+    text-decoration: none;
+  }
+
+  .review-date {
+    padding-top: 1rem;
+    color: #888;
+    text-align: left;
+  }
+
+  .review-stars .star {
+    color: goldenrod;
+    font-size: 1.4rem;
+    margin-right: 2px;
+  }
+
+  .footer-see-all-reviews {
+    display: inline-block;
+    margin-top: 0.8rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    color: #d6006d;
+    text-decoration: none;
   }
 
 /* === Cards === */
@@ -491,7 +672,7 @@
     align-items: center;
     text-align: justify;
 
-    border: 3px solid #ccA196;
+    border: 3px solid goldenrod;
     border-radius: 510px 510px 15px 15px;
     padding: 10px;
   }
@@ -505,7 +686,7 @@
     text-align: justify;
 
     padding: 125px;
-    border: 1px solid #ccA196;
+    border: 1px solid goldenrod;
     border-radius: 500px 500px 5px 5px;
   }
 
