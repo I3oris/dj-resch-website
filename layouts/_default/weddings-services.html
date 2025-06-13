@@ -5,99 +5,70 @@
 
   {{ $mariageDotNet := resources.Get "images/wedding/mariage.net.svg" }}
 
-  {{ $flower1 := resources.Get "images/wedding/flower1.png" }}
-  {{ $flower1 := $flower1.Resize "x300" }}
-
-  {{ $flower2 := resources.Get "images/wedding/flower2.png" }}
-  {{ $flower2 := $flower2.Resize "x300" }}
-
-  {{ $titleLeft := resources.Get "images/wedding/title-left.png" }}
-  {{ $titleLeft := $titleLeft.Resize "x50" }}
-
-  {{ $titleRight := resources.Get "images/wedding/title-right.png" }}
-  {{ $titleRight := $titleRight.Resize "x50" }}
-
-  {{ $box1 := resources.Get "images/wedding/box1.png" }}
-  {{ $box1 := $box1.Resize "x100" }}
-
-  {{ $box2 := resources.Get "images/wedding/box2.png" }}
-  {{ $box2 := $box2.Resize "x100" }}
-
-  {{ $djWedding := resources.Get "images/wedding/dj-wedding.png" }}
-  {{ $djWedding := $djWedding.Resize "x250" }}
-
 
   <div id="wedding" class="wedding" style="background-image: url({{ $background.Permalink }});">
-    <div class="wedding-card">
-      <div class="wedding-card-border">
-        <div class="wedding-card-inner">
-          {{ .Content }}
-          <a class="mariage-net-a" href={{.Site.Params.weddingsService.link}}>
-            <p>Retrouver DJ Resch sur</p>
-            <img class="mariage-net-image" src="{{ $mariageDotNet.Permalink }}" alt="Retrouver sur mariage.net"/>
-          </a>
-          <a class="wedding-contact-button" href="/contact">Contacter</a>
-        </div>
+    <div class="wedding-top">
+      <div class="wedding-top-content-col">
+        {{ .Content }}
       </div>
+      <div class="wedding-top-images-col">
+        {{ $image := resources.Get "images/wedding/dj-resch-photo1.jpg" }}
+        {{ with $image }}
+          {{ $resized := .Resize "x400" }}
+          <div class="home-image-container">
+            <img class="home-image styled-image wedding-photo1" src="{{ $resized.Permalink }}" alt="photo"/>
+          </div>
+        {{ end }}
 
-      <div class="flower1-image-container">
-        <img class="flower1-image" src="{{ $flower1.Permalink }}" alt="flower1"/>
-      </div>
-      <div class="flower2-image-container">
-        <img class="flower2-image" src="{{ $flower2.Permalink }}" alt="flower2"/>
+        {{ $image := resources.Get "images/wedding/dj-resch-photo2.jpg" }}
+        {{ with $image }}
+          {{ $resized := .Resize "x400" }}
+          <div class="home-image-container">
+            <img class="home-image styled-image wedding-photo2" src="{{ $resized.Permalink }}" alt="photo"/>
+          </div>
+        {{ end }}
       </div>
     </div>
+
+
+    <div class="tariff-cards">
+      {{ $all := site.RegularPages }}
+      {{ $tariffs := (slice) }}
+      {{ range $all }}
+        {{ if strings.HasPrefix .Path "/weddings/services/tariffs" }}
+          {{ $tariffs = $tariffs | append . }}
+        {{ end }}
+      {{ end }}
+      {{ $tariffs := sort $tariffs "Params.price" "asc"}}
+      {{ range $tariffs }}
+        <div class="tariff-card">
+          <div class="tariff-card-icon-and-title">
+            {{ $basename := path.BaseName .Path }}
+          {{ $image := resources.Get (printf "images/wedding/%s.jpg" $basename) }}
+          {{ with $image }}
+            {{ $resized := .Resize "100x100" }}
+            <div class="tariff-icon-container">
+
+              <img class="tariff-icon" src="{{ $resized.Permalink }}" alt="0">
+            </div>
+          {{ end }}
+          <h3>{{ .Title }}</h3>
+          </div>
+          <h4 class="tariff-subtitle">{{ .Params.subtitle }}</h4>
+          <div class="tariff-price">{{ .Params.price }} €</div>
+          <div class="tariff-content">
+            {{.Content}}
+          </div>
+          <a href="/contact">
+          <button class="tariff-button">Réserver</button>
+          </a>
+        </div>
+      {{ end }}
+    </div>
+
   </div>
 
   <script type="text/javascript">
-    wedding = document.getElementById("wedding");
-
-    var djWedding = document.getElementById('dj-wedding-image');
-    console.log(djWedding);
-    var image = document.createElement('img');
-    image.src = '{{ $djWedding.Permalink }}';
-    image.classList.add('dj-wedding-image');
-    djWedding.appendChild(image);
-
-
-    wedding.querySelectorAll('h2').forEach(function(h2) {
-        var wrapper = document.createElement('div');
-        wrapper.classList.add('wedding-title');
-
-        var leftImage = document.createElement('img');
-        leftImage.src = '{{ $titleLeft.Permalink }}';
-        leftImage.classList.add('wedding-left-image');
-
-        var rightImage = document.createElement('img');
-        rightImage.src = '{{ $titleRight.Permalink }}';
-        rightImage.classList.add('wedding-right-image');
-
-        wrapper.appendChild(leftImage);
-        wrapper.appendChild(h2.cloneNode(true));
-        wrapper.appendChild(rightImage);
-
-        h2.replaceWith(wrapper);
-    });
-
-    wedding.querySelectorAll('li').forEach(function(li) {
-        var wrapper = document.createElement('div');
-        wrapper.classList.add('wedding-li');
-
-        var leftImage = document.createElement('img');
-        leftImage.src = '{{ $box1.Permalink }}';
-        leftImage.classList.add('box1-image');
-
-        var rightImage = document.createElement('img');
-        rightImage.src = '{{ $box2.Permalink }}';
-        rightImage.classList.add('box2-image');
-
-        wrapper.appendChild(leftImage);
-        wrapper.appendChild(li.cloneNode(true));
-        wrapper.appendChild(rightImage);
-
-        li.replaceWith(wrapper);
-    });
-
     window.addEventListener('scroll', function() {
         var scrollPosition = window.scrollY;
 

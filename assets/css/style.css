@@ -141,7 +141,6 @@
   }
 
   .home-image-container {
-    flex: 0 0 auto;
   }
 
   .dj-background-image-container {
@@ -230,6 +229,7 @@
     color: #ddd;
     width: 100%;
     padding: 60px 0;
+    padding-top: 30px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -277,6 +277,8 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
     text-align: left;
   }
 
@@ -322,6 +324,8 @@
 
   .footer-questions {
     max-width: 100rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
   }
 
   .footer-questions p {
@@ -341,15 +345,29 @@
   .footer-questions-columns {
     display: flex;
     gap: 2rem;
-    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
   }
 
+  @media (max-width: 800px) {
+     .footer-questions {
+      width: 100%;
+     }
+    .footer-questions-columns {
+      flex-direction: column;
+      gap: 0;
+     }
+   }
+
   .footer-column {
-    flex: 1 1 0;
+    flex: 1;
     font-size: 1rem;
     color: #ddd;
     line-height: 1.5;
     text-align: left;
+    min-width: 10rem;
+    text-wrap-mode: pretty;
+    overflow-wrap: break-word;
   }
 
   .footer-reviews {
@@ -359,6 +377,13 @@
     margin: 2rem;
     padding-bottom: 1.5rem;
     max-width: 700px;
+  }
+
+  @media (max-width: 375px) {
+    .footer-reviews {
+      margin: 0rem;
+      margin-bottom: 1rem;
+    }
   }
 
   .footer-reviews-header {
@@ -614,26 +639,16 @@
 
   @font-face {
     font-family: 'WeddingFont';
-    src: url('/fonts/wedding-font.ttf') format('truetype');
+    src: url('/fonts/WeddingDreamDemoRegular.ttf') format('truetype');
     font-weight: bold;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: 'WeddingTextFont';
-    src: url('/fonts/Please-write-me-a-song.ttf') format('truetype');
-    font-weight: normal;
     font-style: normal;
   }
 
   .wedding {
     background-color: #f0ddd5;
-    padding-bottom: 240px;
     display: flex;
     justify-content: center;
-    font-family: "WeddingTextFont";
-    letter-spacing: 0.1rem;
-
+    flex-direction: column;
     background-position: center 0px;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -652,176 +667,210 @@
     }
   }
 
-  .wedding-card {
-    position: relative;
-    background-color: #F3EFF1;
-
-    padding: 50px;
-    margin: 100px;
-    width: 1000px;
-    border-radius: 10px;
-
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 1s ease;
-  }
-
-  .wedding-card-border {
+  .wedding-top {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    text-align: justify;
-
-    border: 3px solid goldenrod;
-    border-radius: 510px 510px 15px 15px;
-    padding: 10px;
-  }
-
-  .wedding-card-inner {
-    display: flex;
+    align-items: flex-start;
+    padding: 80px;
+    background-color: #fff;
+    margin: 0rem;
+    padding: 0rem;
     width: 100%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: justify;
-
-    padding: 125px;
-    border: 1px solid goldenrod;
-    border-radius: 500px 500px 5px 5px;
   }
 
-  .wedding-card h1 {
-    width: 300px;
-    color: #52797c;
-    font-family: 'WeddingFont';
-    font-size: 4rem;
+  .wedding-top h2 {
     text-align: center;
+    font-size: 3rem;
+    font-weight: 100;
+    font-family: "WeddingFont";
+    padding-top: 1.3rem;
   }
 
-  .wedding-card h2 {
-    color: #52797c;
-    font-size: 1.7rem;
+  .wedding-top h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 200;
   }
 
-  .wedding-title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding-top: 50px;
-    padding-bottom: 30px;
-
+  .wedding-top p {
+    margin-bottom: 3rem;
   }
 
-  .wedding-card h3 {
-    color: #52797c;
+  .wedding-top-content-col{
+    max-width: 30rem;
+    margin: 2rem;
+    padding: 0rem;
+    text-align: justify;
     font-size: 1.4rem;
   }
 
-  .wedding-card p {
-    color: #52797c;
-    font-size: 1.5rem;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
-    letter-spacing: 0.1rem;
-  }
-
- .wedding-card li {
-    color: #52797c;
-    font-size: 1.7rem;
-    padding: 15px;
-    list-style-type: none;
-    text-align: center;
-    min-height: 80px;
-  }
-
-  .wedding-card ul {
+  .wedding-top-images-col {
+    margin: 2rem;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-  }
-
-  .wedding-card:hover {
-    box-shadow: 0 0 3px #ccA196;
-    transition: box-shadow 0.3s ease;
-  }
-
-  .flower2-image-container {
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
-
-  .flower1-image-container {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-  }
-
-  .wedding-li {
-    position: relative;
-    padding: 20px 30px 20px 30px;
-    transform: scale(1.0);
-    transition: transform 0.3s ease;
-  }
-
-  .wedding-li:hover {
-    transform: scale(1.1);
-    transition: transform 0.3s ease;
-  }
-
-  .box1-image {
-    position: absolute;
-    top: 5px;
-    right: 3px;
-  }
-
-  .box2-image {
-    position: absolute;
-    bottom: 5px;
-    left: 3px;
-  }
-
-  .mariage-net-a {
-    text-decoration: none;
-  }
-
-  .mariage-net-a p {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    text-align: center;
-  }
-
-  .wedding-contact-button {
-    margin-top: 50px;
-    padding: 10px 20px;
-    font-size: 1.7rem;
-    text-decoration: none;
-    border: none;
-    border-radius: 5px;
-    background: linear-gradient(45deg, darkgoldenrod, goldenrod);
-    color: #fff;
-    cursor: pointer;
-  }
-
-  .wedding-contact-button:hover {
-    background: linear-gradient(45deg, goldenrod, darkgoldenrod);
+    gap: 1rem;
+    padding: 0rem;
   }
 
   @media (max-width: 768px) {
-    .wedding {
-      padding-bottom: 0px;
+    .wedding-top {
+      flex-direction: column-reverse;
+      align-items: center;
     }
 
-    .wedding-card {
-      width: 100%;
-      margin: 0px;
-      padding: 20px;
+   .wedding-top-content-col{
+      margin: 1rem;
     }
 
-    .wedding-card-inner {
-      padding: 250px 20px 300px 20px;
+    .wedding-top-images-col {
+      display: flex;
+      flex-direction: row;
+      margin: 1rem;
     }
+
+    .wedding-photo1 {
+      height: 14rem;
+      width: 10rem;
+    }
+
+    .wedding-photo2 {
+      height: 14rem;
+      width: 10rem;
+    }
+  }
+
+  @media (max-width: 375px) {
+    .wedding-photo2 {
+      display: none;
+    }
+  }
+
+  .tariff-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin: 3rem 0;
+    padding: 1rem;
+  }
+
+  .tariff-card {
+    text-align: center;
+    background: #fff;
+    border-radius: 5px;
+    width: 25rem;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 3s ease, transform 0.3s ease;
+    font-size: 1.1rem;
+  }
+
+  .tariff-card:hover {
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    transform: scale(1.1);
+  }
+
+  @media (max-width: 500px) {
+    .tariff-card:hover {
+      transform: none;
+    }
+
+    .tariff-card-icon-and-title{
+      display: flex;
+      flex-direction: row;
+      padding-right: 2rem;
+      align-items: center;
+    }
+  }
+
+  .tariff-icon-container {
+    min-width: 3rem;
+  }
+
+  .tariff-icon {
+    font-size: 2rem;
+    border-radius: 50px;
+  }
+
+  .tariff-card h3 {
+    font-size: 2rem;
+    font-weight: 200;
+    margin-bottom: 0rem;
+    font-family: "WeddingFont";
+    padding-top: 1.3rem;
+  }
+
+  .tariff-card h4 {
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: italic;
+    color: #899056;
+  }
+
+  .tariff-card strong {
+    font-weight: bold;
+    color: #899056;
+  }
+
+  .tariff-content ul {
+    margin: 2rem;
+    padding: 0;
+  }
+
+  .tariff-card li {
+    margin-top: 1.3rem;
+  }
+
+  .tariff-presence {
+    color: #66aa55;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+
+  .tariff-price {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  .tariff-content {
+    list-style: disc;
+    text-align: justify;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+  }
+
+  @media (max-width: 500px) {
+    .tariff-content ul {
+      margin: 1rem;
+    }
+
+    .tariff-content li{
+      list-style-position: outside;
+    }
+  }
+
+  .tariff-button {
+    background: #899056;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+
+  .tariff-button:hover {
+    background: #638563;
+    transition: background 0.3s ease;
   }
 
 /* === Pagination === */
