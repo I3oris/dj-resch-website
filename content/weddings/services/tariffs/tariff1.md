@@ -1,6 +1,7 @@
 ---
 title: "Prestige"
 subtitle: "Présence à partir du repas."
+emailSubject: "Réservation DJ Marriage: Formule Prestige"
 price: 1200
 ---
 

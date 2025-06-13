@@ -23,6 +23,16 @@
       </form>
 
       <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          // Get the "subject" parameter from the URL
+          const urlParams = new URLSearchParams(window.location.search);
+          const objectParam = urlParams.get('subject');
+
+          if (objectParam) {
+            document.getElementById('subject').value = objectParam;
+          }
+        });
+
         document.getElementById('contactForm').addEventListener('submit', function(event) {
           event.preventDefault(); // Prevent the default form submission
 

@@ -371,12 +371,15 @@
   }
 
   .footer-reviews {
-    background: #333443;
+    /*background: #333443;*/
+    background: #fff;
     padding: 0px;
     border-radius: 15px;
     margin: 2rem;
     padding-bottom: 1.5rem;
     max-width: 700px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
   }
 
   @media (max-width: 375px) {
@@ -387,17 +390,18 @@
   }
 
   .footer-reviews-header {
-    background-color: #d6006d;
+    background-color: #EBCDB5;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-    gap: 1rem;
+    gap: 0.5rem;
     display: flex;
     flex-direction: column;
-    padding: 1.5rem;
+    padding: 1rem;
   }
 
   .footer-reviews-header p {
-    color: white;
+    /*color: white;*/
+    /*color: bg-near-white;*/
     margin: 0px;
     padding: 0px;
     font-weight: bold;
@@ -413,38 +417,41 @@
   }
 
   .footer-reviews-rate p {
-    color: white;
+    /*color: white;*/
     margin: 0px;
     padding: 0px;
     font-weight: 400;
   }
 
   .footer-reviews h3 {
-    color: white;
+    /*color: white;*/
     font-size: 1.4rem;
     font-weight: bold;
     margin: 0rem;
+    /*padding: 0;*/
   }
 
   .footer-review {
-    padding: 2rem;
+    padding: 1rem;
     border-bottom: 0.5px solid #8888;
     align-items: flex-start;
-    padding-top: 2rem;
     margin-bottom: 0.5rem;
+    margin: 0;
   }
 
   .review-author {
     font-size: 1.4rem;
     font-weight: bold;
     margin-bottom: 1rem;
+    margin: 0;
+    padding-bottom: 0.5rem;
   }
 
   .review-content {
     text-align: justify;
     font-size: 1rem;
     line-height: 1.4;
-    color: #ddd;
+    /*color: #ddd;*/
     font-weight: 200;
     text-decoration: none;
   }
@@ -464,10 +471,15 @@
   .footer-see-all-reviews {
     display: inline-block;
     margin-top: 0.8rem;
-    margin-bottom: 2rem;
+    /*margin-bottom: 1rem;*/
     font-weight: bold;
-    color: #d6006d;
+    /*color: #d6006d;*/
+    color: #899056;
     text-decoration: none;
+  }
+
+  .mariage-net-image {
+    padding-top: 1.5rem;
   }
 
 /* === Cards === */
@@ -649,23 +661,36 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
     background-position: center 0px;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
   }
 
-   @media (max-width: 1500px) {
+  @media (max-width: 1600px) {
     .wedding {
-      background-size: 1500px auto;
+    background-size: initial;
+      /*background-size: 1600px auto;*/
     }
   }
-
+/*
   @media (max-width: 1300px) {
     .wedding {
       background-size: 2000px auto;
     }
   }
+*/
+  .wedding h2 {
+    /*color: white;*/
+    /*padding: 0;*/
+    margin-top: 6rem;
+    margin-bottom: 0rem;
+    font-size: 3rem;
+    font-family: "WeddingFont";
+  }
+
 
   .wedding-top {
     display: flex;
@@ -758,7 +783,7 @@
     text-align: center;
     background: #fff;
     border-radius: 5px;
-    width: 25rem;
+    max-width: 25rem;
     padding: 2rem 1.5rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -774,6 +799,10 @@
   }
 
   @media (max-width: 500px) {
+    .tariff-cards{
+      padding: 0rem;
+    }
+
     .tariff-card:hover {
       transform: none;
     }
@@ -808,6 +837,8 @@
     font-weight: 400;
     font-style: italic;
     color: #899056;
+    color: darkgoldenrod;
+    /*color: #CBAD95;*/
   }
 
   .tariff-card strong {
