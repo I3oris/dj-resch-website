@@ -830,6 +830,7 @@
     margin-bottom: 0rem;
     font-family: "WeddingFont";
     padding-top: 1.3rem;
+    z-index: 10;
   }
 
   .tariff-card h4 {
