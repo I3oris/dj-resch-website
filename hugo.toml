@@ -47,16 +47,16 @@ enableEmoji = true
     name = "Home"
     url = "/"
     weight = 1
-  [[menu.main]]
-    identifier = "dj"
-    name = "DJ / Showcases"
-    url = "/dj/dates"
-    weight = 2
-    [[menu.main]]
-      parent = "dj"
-      name = "Dates"
-      url = "/dj/dates"
-      weight = 1
+  # [[menu.main]]
+  #   identifier = "dj"
+  #   name = "DJ / Showcases"
+  #   url = "/dj/dates"
+  #   weight = 2
+  #   [[menu.main]]
+  #     parent = "dj"
+  #     name = "Dates"
+  #     url = "/dj/dates"
+  #     weight = 1
   #   [[menu.main]]
   #     parent = "dj"
   #     name = "Photos"
@@ -76,22 +76,17 @@ enableEmoji = true
     name = "Mariages"
     url = "/weddings/services"
     weight = 4
-    [[menu.main]]
-      parent = "wedding"
-      name = "Services"
-      url = "/weddings/services"
-      weight = 1
-    [[menu.main]]
-      identifier = "wedding-photo"
-      parent = "wedding"
-      name = "Photos"
-      url = "/weddings/photos"
-      weight = 2
-    [[menu.main]]
-      parent = "wedding"
-      name = "Avis"
-      url = "/weddings/rates"
-      weight = 3
+  #   [[menu.main]]
+  #     parent = "wedding"
+  #     name = "Services"
+  #     url = "/weddings/services"
+  #     weight = 1
+  #   [[menu.main]]
+  #     identifier = "wedding-photo"
+  #     parent = "wedding"
+  #     name = "Photos"
+  #     url = "/weddings/photos"
+  #     weight = 2
   # [[menu.main]]
   #   identifier = "about"
   #   name = "À propos"

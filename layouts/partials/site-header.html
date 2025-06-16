@@ -1,58 +1,57 @@
-{{ $featured_image := partial "func/GetFeaturedImage.html" . }}
-{{ if $featured_image }}
-  {{/* Trimming the slash and adding absURL make sure the image works no matter where our site lives */}}
-  <header class="cover bg-top" style="background-image: url('{{ $featured_image }}');">
-    <div class="{{ .Site.Params.cover_dimming_class | default "bg-black-60" }}">
-      {{ partial "site-navigation.html" .}}
-      <div class="tc-l pv4 pv6-l ph3 ph4-ns">
-        <h1 class="f2 f-subheadline-l fw2 white-90 mb0 lh-title">
+<div class="header-sticky bg-black">
+  {{ partial "site-navigation.html" . }}
+</div>
+<header class="header">
+  <div class="bg-black">
+    {{ partial "site-navigation.html" . }}
+    {{ $isHomePage := eq .Title "DJ RESCH" }}
+    {{ $isWeddingPage := eq .Title "Mariages" }}
+
+    <div class="header-container">
+      {{ $image := resources.Get "images/resch.png" }}
+
+      {{ if $isHomePage }}
+        <h1 class="dj-title">
+          DJ
+        </h1>
+        {{ with $image }}
+          {{ $resized := .Fit "400x400" }}
+          <div class="resch-image-container is-home">
+            <img src="{{ $resized.Permalink }}" alt="logo" class="resch-image">
+          </div>
+        {{ end }}
+
+      {{ else }}
+        {{ with $image }}
+          {{ $resized := .Fit "400x400" }}
+          <div class="resch-image-container">
+            <img src="{{ $resized.Permalink }}" alt="logo" class="resch-image">
+          </div>
+        {{ end }}
+        <h1 class="header-title">
           {{ .Title | default .Site.Title }}
         </h1>
-        {{ with .Params.description }}
-          <h2 class="fw1 f5 f3-l white-80 measure-wide-l center mt3">
-            {{ . }}
-          </h2>
-        {{ end }}
-      </div>
+      {{ end }}
+      {{ with .Params.description }}
+        <h2 class="fw1 f5 f3-l white-80 measure-wide-l center lh-copy mt3 mb4">
+          {{ . }}
+        </h2>
+      {{ end }}
     </div>
-  </header>
-{{ else }}
-  <header>
-    <div class="pb3-m pb4-l bg-black header">
-      {{ partial "site-navigation.html" . }}
-      {{ $isHome := eq .Title "DJ RESCH" }}
+  </div>
 
-      <div class="tc-l pv3 ph3 ph4-ns">
-        {{ $image := resources.Get "images/resch.png" }}
+</header>
+<script>
+  window.addEventListener('scroll', () => {
+    const header = document.querySelector("header");
+    const headerSticky = document.querySelector(".header-sticky");
+    if (window.scrollY > /*header.offsetHeight*/ 69) {
+      headerSticky.style.opacity = 1;
+      headerSticky.style.display = 'flex';
+    } else {
+      headerSticky.style.opacity = 0;
+      headerSticky.style.display = 'none';
+    }
+  });
+</script>
 
-        {{ if $isHome }}
-          <h1 class="dj-title">
-            DJ
-          </h1>
-          {{ with $image }}
-            {{ $resized := .Fit "400x400" }}
-            <div class="resch-image-container is-home">
-              <img src="{{ $resized.Permalink }}" alt="logo" class="resch-image">
-            </div>
-          {{ end }}
-
-        {{ else }}
-          {{ with $image }}
-            {{ $resized := .Fit "400x400" }}
-            <div class="resch-image-container">
-              <img src="{{ $resized.Permalink }}" alt="logo" class="resch-image">
-            </div>
-          {{ end }}
-          <h1 class="header-title">
-            {{ .Title | default .Site.Title }}
-          </h1>
-        {{ end }}
-        {{ with .Params.description }}
-          <h2 class="fw1 f5 f3-l white-80 measure-wide-l center lh-copy mt3 mb4">
-            {{ . }}
-          </h2>
-        {{ end }}
-      </div>
-    </div>
-  </header>
-{{ end }}

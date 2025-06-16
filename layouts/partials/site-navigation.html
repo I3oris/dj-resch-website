@@ -1,5 +1,5 @@
-<nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
+<nav  role="navigation">
+  <div class="navigation-menu">
     <a href="{{ .Site.Home.RelPermalink }}" class="f3 fw2 hover-white no-underline white-90 dib">
       {{ with .Site.Params.site_logo }}
         <img src="{{ relURL . }}" class="w100 mw5-ns" alt="{{ $.Site.Title }}" />
@@ -8,9 +8,29 @@
       {{ end }}
     </a>
     <div class="flex-l items-center">
-      {{ partial "i18nlist.html" . }}
+      <!-- {-{ partial "i18nlist.html" . }} -->
       <nav class="menu">
-        <ul class="menu-list">
+        <ul class="menu-list menu-burger">
+          <li class="menu-dropdown burger-dropdown">
+            <a class="burger" href="/" id="burgerBtn">
+              <span class="burger-bar"></span>
+              <span class="burger-bar"></span>
+              <span class="burger-bar"></span>
+            </a>
+            <ul class="submenu-list burger-submenu">
+              <div class="burger-submenu-front">
+                {{ range .Site.Menus.main }}
+                  <li class="menu-item submenu-item">
+                    <a class="menu-link burger-menu-link" href="{{ .URL }}">{{ .Name }}</a>
+                  </li>
+                {{ end }}
+              </div>
+            </ul>
+          </li>
+        </ul>
+
+
+        <ul class="menu-list menu-expanded">
           {{ $currentNode := . }}
           {{ range .Site.Menus.main }}
             {{ if .Name }}
@@ -18,7 +38,7 @@
                 <li class="menu-item menu-dropdown">
                   <a class="menu-link" href="{{ .URL }}">
                     {{ .Name }}
-                    <label class="drop-icon" for="{{ .Name }}">▾</label>
+                    <label class="drop-icon">▾</label>
                   </a>
                   <ul class="submenu-list">
                     {{ range .Children }}
@@ -37,78 +57,140 @@
           {{ end }}
         </ul>
       </nav>
-      {{ partialCached "social-follow.html" . }}
+      <!-- {-{ partialCached "social-follow.html" . }} -->
     </div>
   </div>
 
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      // Function to set the submenu width
-      function setSubmenuWidth() {
-        const dropdowns = document.querySelectorAll(".menu-dropdown");
+    var NavigationOnLoaded = {
+      call: function () {
+        // Function to set the submenu width
+        function setSubmenuWidth() {
+          const dropdowns = document.querySelectorAll(".menu-dropdown");
 
-        dropdowns.forEach(dropdown => {
-          const submenu = dropdown.querySelector(".submenu-list");
+          dropdowns.forEach(dropdown => {
+            const submenu = dropdown.querySelector(".submenu-list");
+            if (submenu) {
+              submenu.style.minWidth = `${dropdown.offsetWidth}px`;
+            }
+          });
+        }
+
+        // Show submenu on hover
+        function showSubmenu(event) {
+          if (event.target.closest(".submenu-item")) return;
+
+          event.preventDefault();
+
+          const submenu = this.querySelector(".submenu-list");
           if (submenu) {
-            submenu.style.minWidth = `${dropdown.offsetWidth}px`; // Set width of submenu to match parent
+            submenu.style.display = "block";
+            setTimeout(() => {
+              submenu.style.opacity = 1;
+              submenu.style.transform = "translateY(0)";
+            }, 10);
+          }
+        }
+
+        // Hide submenu on mouse leave
+        function hideSubmenu(event) {
+          const submenu = this.querySelector(".submenu-list");
+          if (submenu) {
+            submenu.style.opacity = 0;
+            submenu.style.transform = "translateY(-10px)";
+            submenu.style.display = "none";
+          }
+        }
+
+        // Close all submenus
+        function closeAllSubmenus() {
+          const submenus = document.querySelectorAll(".submenu-list");
+          submenus.forEach(submenu => {
+            submenu.style.opacity = 0;
+            submenu.style.transform = "translateY(-10px)";
+            setTimeout(() => {
+              submenu.style.display = "none";
+            }, 200);
+          });
+
+          document.body.classList.remove("no-scroll");
+          document.querySelector(".header-sticky").classList.remove("burger-menu-open");
+          document.querySelectorAll(".burger").forEach(button => {
+            button.classList.remove("active");
+          });
+        }
+
+        // Show burger menu
+        function toggleBurgerMenu(event) {
+          if (event.target.closest(".submenu-item")) return;
+
+          event.preventDefault();
+
+          const submenu = this.querySelector(".submenu-list");
+          if (submenu) {
+            if(submenu.style.display == "block"){
+              submenu.style.opacity = 0;
+              submenu.style.transform = "translateY(-10px)";
+              document.body.classList.remove("no-scroll");
+              document.querySelector(".header-sticky").classList.remove("burger-menu-open");
+              document.querySelectorAll(".burger").forEach(button => {
+                button.classList.remove("active");
+              });
+
+              setTimeout(() => {
+                submenu.style.display = "none";
+              }, 200);
+            } else {
+              submenu.style.display = "block";
+              document.body.classList.add("no-scroll");
+              document.body.classList.add("no-scroll");
+              document.querySelector(".header-sticky").classList.add("burger-menu-open");
+              document.querySelectorAll(".burger").forEach(button => {
+                button.classList.add("active");
+              });
+
+              setTimeout(() => {
+                submenu.style.opacity = 1;
+                submenu.style.transform = "translateY(0)";
+              }, 10);
+            }
+          }
+        }
+
+        // Set initial submenu width
+        setSubmenuWidth();
+
+        // Add click event listener to all dropdowns
+        const dropdowns = document.querySelectorAll(".menu-dropdown");
+        dropdowns.forEach(dropdown => {
+          if(dropdown.classList.contains("burger-dropdown")) {
+            dropdown.addEventListener("click", toggleBurgerMenu);
+          } else {
+            dropdown.addEventListener("click", showSubmenu);
+            dropdown.addEventListener("mouseenter", showSubmenu);
+            dropdown.addEventListener("mouseleave", hideSubmenu);
           }
         });
-      }
 
-      // Show submenu on hover
-      function showSubmenu(event) {
-        if (event.target.closest(".submenu-item")) return;
+        // Adjust submenu width on window resize
+        window.addEventListener("resize", () => {
+          setSubmenuWidth();
+          closeAllSubmenus();
 
-        event.preventDefault();
+        });
 
-        const submenu = this.querySelector(".submenu-list");
-        if (submenu) {
-          submenu.style.display = "block";
-          setTimeout(() => {
-            submenu.style.opacity = 1;
-            submenu.style.transform = "translateY(0)";
-          }, 10);
-        }
-      }
+        // Close submenus when clicking outside
+        document.addEventListener("click", function (event) {
+          if (!event.target.closest(".menu-dropdown")) {
+            closeAllSubmenus();
+          }
+        });
 
-      // Hide submenu on mouse leave
-      function hideSubmenu(event) {
-        const submenu = this.querySelector(".submenu-list");
-        if (submenu) {
-          submenu.style.opacity = 0;
-          submenu.style.transform = "translateY(-10px)";
-          submenu.style.display = "none";
-        }
-      }
-
-      // Close all submenus
-      function closeAllSubmenus() {
-        const submenus = document.querySelectorAll(".submenu-list");
-        submenus.forEach(submenu => {
-          submenu.style.display = "none";
+        const burgerBtn = document.getElementById('burgerBtn');
+        burgerBtn.addEventListener('click', () => {
+          burgerBtn.classList.toggle('active');
         });
       }
-
-      // Set initial submenu width
-      setSubmenuWidth();
-
-      // Add click event listener to all dropdowns
-      const dropdowns = document.querySelectorAll(".menu-dropdown");
-      dropdowns.forEach(dropdown => {
-        dropdown.addEventListener("click", showSubmenu);
-        dropdown.addEventListener("mouseenter", showSubmenu);
-        dropdown.addEventListener("mouseleave", hideSubmenu);
-      });
-
-      // Adjust submenu width on window resize
-      window.addEventListener("resize", setSubmenuWidth);
-
-      // Close submenus when clicking outside
-      document.addEventListener("click", function (event) {
-        if (!event.target.closest(".menu-dropdown")) {
-          closeAllSubmenus();
-        }
-      });
-    });
+    };
   </script>
 </nav>
