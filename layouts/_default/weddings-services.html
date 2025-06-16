@@ -133,7 +133,7 @@
     window.addEventListener('scroll', function() {
         var scrollPosition = window.scrollY;
 
-        var newBackgroundPositionY = - scrollPosition * 0.5;
+        var newBackgroundPositionY = scrollPosition * 0.4;
 
         document.querySelectorAll('.wedding').forEach(function(element) {
             element.style.backgroundPositionY = `${newBackgroundPositionY}px`;
