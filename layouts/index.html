@@ -120,7 +120,7 @@
         // Shift opacity of 'DJ RESCH' on scroll
         document.querySelectorAll('.home-resch-image-container').forEach(function(element) {
           var limit = height-300;
-          element.style.opacity = (limit - scrollPosition)/limit;
+          element.style.opacity = clamp((limit - scrollPosition)/limit, 0, 1);
         });
 
         // Shift opacity and position of rows on scroll
