@@ -645,7 +645,7 @@
 
   @media (max-width: 375px) {
     .footer-reviews {
-      margin: 0rem;
+      margin: 1rem;
       margin-bottom: 1rem;
     }
   }
@@ -1051,7 +1051,7 @@
 
   @media (max-width: 500px) {
     .tariff-cards{
-      padding: 0rem;
+      padding: 1rem;
     }
 
     .tariff-card:hover {
