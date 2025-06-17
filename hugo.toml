@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://djresch.com/'
 languageCode = 'fr'
 title = 'DJ RESCH'
 theme = 'ananke'
@@ -15,7 +15,6 @@ enableEmoji = true
 
 [params]
   site_logo = "favicon/favicon-32x32.png"
-  description = "Bienvenue sur le site officiel de DJ RESCH"
   author = "DJ RESCH"
   email = "djreschbooking@gmail.com"
   customCSS = ["css/custom.css"]
@@ -26,16 +25,6 @@ enableEmoji = true
     Url = "https://example.com"
   [params.Social_media.Twitter]
     Url = "https://example.com"
-
-  [params.presentation]
-    title = "À propos"
-    text = [
-      "Age : 24 Ans",
-      "Langues : Francais & Anglais courant",
-      "Mobilité : Permis internationnal & Passeport",
-      "Style Musical : GÉNÉRALISTE",
-      "Influences : Bass House, Brazilian Bass, Deep House, Hip-Hop, Trap, Actu, EDM, Psy Trance, Urban, retro, 80's/90's/00's.",
-    ]
 
   [params.weddingsService]
     link = "https://www.mariages.net/musique-mariage/resch--e316860"
