@@ -16,7 +16,7 @@
         {{ with $image }}
           {{ $resized := .Resize "x400" }}
           <div class="home-image-container">
-            <img class="home-image styled-image wedding-photo1" src="{{ $resized.Permalink }}" alt="photo"/>
+            <img class="styled-image wedding-photo1" src="{{ $resized.Permalink }}" alt="photo"/>
           </div>
         {{ end }}
 
@@ -24,7 +24,7 @@
         {{ with $image }}
           {{ $resized := .Resize "x400" }}
           <div class="home-image-container">
-            <img class="home-image styled-image wedding-photo2" src="{{ $resized.Permalink }}" alt="photo"/>
+            <img class="styled-image wedding-photo2" src="{{ $resized.Permalink }}" alt="photo"/>
           </div>
         {{ end }}
       </div>

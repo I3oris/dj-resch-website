@@ -1,4 +1,4 @@
-<nav  role="navigation">
+<nav role="navigation">
   <div class="navigation-menu">
     <a href="{{ .Site.Home.RelPermalink }}" class="f3 fw2 hover-white no-underline white-90 dib">
       {{ with .Site.Params.site_logo }}
@@ -114,7 +114,7 @@
           });
 
           document.body.classList.remove("no-scroll");
-          document.querySelector(".header-sticky").classList.remove("burger-menu-open");
+          document.querySelector(".header").classList.remove("burger-menu-open");
           document.querySelectorAll(".burger").forEach(button => {
             button.classList.remove("active");
           });
@@ -132,7 +132,7 @@
               submenu.style.opacity = 0;
               submenu.style.transform = "translateY(-10px)";
               document.body.classList.remove("no-scroll");
-              document.querySelector(".header-sticky").classList.remove("burger-menu-open");
+              document.querySelector(".header").classList.remove("burger-menu-open");
               document.querySelectorAll(".burger").forEach(button => {
                 button.classList.remove("active");
               });
@@ -144,7 +144,7 @@
               submenu.style.display = "block";
               document.body.classList.add("no-scroll");
               document.body.classList.add("no-scroll");
-              document.querySelector(".header-sticky").classList.add("burger-menu-open");
+              document.querySelector(".header").classList.add("burger-menu-open");
               document.querySelectorAll(".burger").forEach(button => {
                 button.classList.add("active");
               });

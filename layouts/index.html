@@ -1,32 +1,149 @@
 {{ define "main" }}
   {{ $image := resources.Get "images/dj-background.jpg" }}
+  {{ $imageHeight := $image.Height}}
+  {{ $imageWidth := $image.Width}}
   {{ with $image }}
-    {{ $resized := .Resize "x650" }}
-    <div class="warning">Ce site est en cours de construction. Les informations qui s'y trouvent sont à titre d’exemple et ne sont pas à jour ou ne correspondent pas à DJ Resch.</div>
-    <div class="dj-background-image-container">
-      <img class="dj-background-image" src="{{ $resized.Permalink }}" alt="dj-background-image"/>
+    {{ $resized := $image }}
+    <div class="dj-background-image" style="background-image: url('{{ $resized.Permalink }}');">
     </div>
   {{ end }}
 
-  <div class="home-content-row">
-    {{ $image := resources.Get "images/dj-photo.jpg" }}
-    {{ with $image }}
-      {{ $resized := .Resize "500x500" }}
-      <div class="home-image-container">
-        <img class="home-image styled-image" src="{{ $resized.Permalink }}" alt="photo"/>
+  <div class="home-content">
+   {{ $reschImage := resources.Get "images/resch.png" }}
+   {{ with $reschImage }}
+      {{ $resized := .Fit "600x600" }}
+      <div class="home-resch-image-container">
+        <h2>DJ</h2>
+        <img src="{{ $resized.Permalink }}" alt="logo" class="resch-image">
+        <a class="home-arrow"></a>
+        <div id="anchor"></div>
       </div>
     {{ end }}
 
-    <div class="home-text-container">
-      <h2>{{.Site.Params.presentation.title}}</h2>
-      {{ range .Site.Params.presentation.text }}
-        <p>{{ . }}</p>
-      {{ end }}
-    </div>
-  </div>
-
-  <article class="home-text-container cf ph3 ph3-l pv1 pv4-l f4 tc-l center measure-wide lh-copy white">
     {{ .Content }}
-  </article>
+
+    {{ range .Params.rows }}
+      <a class="home-content-row" href={{.link}}>
+        <div class="spacer"></div>
+        <div class="home-content-column">
+          {{ $photosPath := .photos }}
+          {{ with .photos }}
+            {{ $photos_files := readDir (printf "assets/%s" $photosPath) }}
+            {{ $photos := slice }}
+            {{ range $photos_files }}
+              {{ $photos = $photos | append (resources.Get (printf "%s/%s" $photosPath .Name)) }}
+            {{ end }}
+            {{ range $photos | first 1}}
+              {{ $resized := .Fill "400x300" }}
+              <div style="background-image: url('{{ $resized.Permalink }}');" alt="logo" class="home-image">
+              </div>
+            {{ end}}
+          {{ end }}
+
+          {{ with .image }}
+            {{ $image = resources.Get . }}
+            {{ with $image }}
+              {{ $resized := .Fill "400x300" }}
+              <div style="background-image: url('{{ $resized.Permalink }}');" alt="logo" class="home-image">
+              </div>
+            {{ end }}
+          {{ end }}
+        </div>
+        <div class="spacer"></div>
+        <div class="home-content-column home-content-column-text">
+          <h2>{{ .title | safeHTML}}</h2>
+          <p>{{ .text | safeHTML }}</p>
+        </div>
+        <div class="spacer"></div>
+      </a>
+    {{ end }}
+
+  <script type="text/javascript">
+    function clamp(num, min, max) {
+      return num <= min ? min : (num >= max ? max : num);
+    }
+
+    function imageIsContain(){
+      var width = window.innerWidth
+        || document.documentElement.clientWidth
+        || document.body.clientWidth;
+      var height = window.innerHeight
+        || document.documentElement.clientHeight
+        || document.body.clientHeight;
+      var winRatio = width/height;
+      var imRatio = {{$imageWidth}}/{{$imageHeight}}
+
+      return (winRatio > imRatio);
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      // Add an initial offset if image is contain
+      document.querySelectorAll('.dj-background-image').forEach(function(element) {
+          if(imageIsContain()) {
+            element.style.backgroundPositionY = `-100px`;
+          } else {
+            element.style.backgroundPositionY = `0px`;
+          }
+        });
+
+      // Add click event to rows
+      document.querySelectorAll('.home-content-row').forEach(function(element) {
+        element.addEventListener("click", () => {
+          window.location.href = element.href;
+        });
+      });
+
+      // Add click event to arrow
+      document.querySelectorAll('.home-arrow').forEach(function(element) {
+        element.addEventListener('click', () => {
+          document.querySelector("#anchor").scrollIntoView({behavior:'smooth'})
+        });
+      });
+    });
+
+    window.addEventListener('scroll', function() {
+        var scrollPosition = window.scrollY;
+        var newBackgroundPositionY = scrollPosition * 0.4;
+        var height = window.innerHeight
+          || document.documentElement.clientHeight
+          || document.body.clientHeight;
+
+        // Shift background image on scroll
+        document.querySelectorAll('.dj-background-image').forEach(function(element) {
+          if(imageIsContain()) {
+            newBackgroundPositionY -= 100;
+          }
+
+          element.style.backgroundPositionY = `${newBackgroundPositionY}px`;
+        });
+
+        // Shift opacity of 'DJ RESCH' on scroll
+        document.querySelectorAll('.home-resch-image-container').forEach(function(element) {
+          var limit = height-300;
+          element.style.opacity = (limit - scrollPosition)/limit;
+        });
+
+        // Shift opacity and position of rows on scroll
+        var i = 0;
+        document.querySelectorAll('.home-content-row').forEach(function(element) {
+          var value = scrollPosition - height/3 - ((element.offsetHeight + 50) * i);
+          var limit = 500;
+          element.style.opacity = clamp(value/limit, 0, 1);
+
+          var factor = 5;
+          if(i % 2 == 0){
+            var percent = 15 + clamp((limit - value)/limit*factor, 0, factor);
+            element.style.marginLeft = `${percent}%`;
+            element.style.width = `${100- percent}%`;
+          } else {
+            var percent = 15 - clamp((limit - value)/limit*factor, 0, factor);
+            element.style.marginRight = `${percent}%`;
+            element.style.width = `${100- percent}%`;
+          }
+
+          i += 1;
+        });
+    });
+  </script>
 {{end}}
 

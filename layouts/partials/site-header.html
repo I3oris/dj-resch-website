@@ -1,27 +1,17 @@
-<div class="header-sticky bg-black">
+{{ $isHomePage := eq .Title "DJ RESCH" }}
+{{ $isWeddingPage := eq .Title "Mariages" }}
+
+<div class="header {{ if $isHomePage }} header-home-page {{ end }}">
   {{ partial "site-navigation.html" . }}
 </div>
-<header class="header">
-  <div class="bg-black">
-    {{ partial "site-navigation.html" . }}
-    {{ $isHomePage := eq .Title "DJ RESCH" }}
-    {{ $isWeddingPage := eq .Title "Mariages" }}
+<header>
+  {{ $image := resources.Get "images/resch.png" }}
 
-    <div class="header-container">
-      {{ $image := resources.Get "images/resch.png" }}
+  {{ if $isHomePage }}
+  {{ else }}
+    <div class="bg-black">
+      <div class="header-container">
 
-      {{ if $isHomePage }}
-        <h1 class="dj-title">
-          DJ
-        </h1>
-        {{ with $image }}
-          {{ $resized := .Fit "400x400" }}
-          <div class="resch-image-container is-home">
-            <img src="{{ $resized.Permalink }}" alt="logo" class="resch-image">
-          </div>
-        {{ end }}
-
-      {{ else }}
         {{ with $image }}
           {{ $resized := .Fit "400x400" }}
           <div class="resch-image-container">
@@ -31,26 +21,22 @@
         <h1 class="header-title">
           {{ .Title | default .Site.Title }}
         </h1>
-      {{ end }}
-      {{ with .Params.description }}
-        <h2 class="fw1 f5 f3-l white-80 measure-wide-l center lh-copy mt3 mb4">
-          {{ . }}
-        </h2>
-      {{ end }}
+        {{ with .Params.description }}
+          <h2 class="fw1 f5 f3-l white-80 measure-wide-l center lh-copy mt3 mb4">
+            {{ . }}
+          </h2>
+        {{ end }}
+      </div>
     </div>
-  </div>
-
+  {{ end }}
 </header>
 <script>
   window.addEventListener('scroll', () => {
-    const header = document.querySelector("header");
-    const headerSticky = document.querySelector(".header-sticky");
+    const header = document.querySelector(".header");
     if (window.scrollY > /*header.offsetHeight*/ 69) {
-      headerSticky.style.opacity = 1;
-      headerSticky.style.display = 'flex';
+      header.classList.add("header-sticky");
     } else {
-      headerSticky.style.opacity = 0;
-      headerSticky.style.display = 'none';
+      header.classList.remove("header-sticky");
     }
   });
 </script>
