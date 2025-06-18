@@ -20,20 +20,27 @@ enableEmoji = true
   customCSS = ["css/custom.css"]
   favicon = "favicon/favicon-32x32.png"
   [params.Social_media.Facebook]
-    Url = "https://example.com"
+    Url = "https://www.facebook.com/DJADRIENRESCH/about/"
   [params.Social_media.Instagram]
+    Url = "https://www.instagram.com/adrien.resch/"
+  [params.Social_media.TikTok]
+    Url = "https://www.tiktok.com/@djresch"
+  # [params.Social_media.Twitter]
+  #   Url = "https://example.com"
+  [params.Social_media.SoundCloud]
+    Url = "https://soundcloud.com/djresch"
+  [params.Social_media.Spotify]
     Url = "https://example.com"
-  [params.Social_media.Twitter]
-    Url = "https://example.com"
-
-  [params.weddingsService]
-    link = "https://www.mariages.net/musique-mariage/resch--e316860"
-  [params.weddingsServiceRate]
-    link = "https://www.mariages.net/musique-mariage/resch--e316860/avis"
+  [params.Social_media.Youtube]
+    Url = "https://www.youtube.com/@djresch"
+  [params.Social_media.MariageNet]
+    Url = "https://www.mariages.net/musique-mariage/resch--e316860"
+  [params.MariageNetRate]
+    Url = "https://www.mariages.net/musique-mariage/resch--e316860/avis"
 
 [menu]
   [[menu.main]]
-    name = "Home"
+    name = "Accueil"
     url = "/"
     weight = 1
   # [[menu.main]]

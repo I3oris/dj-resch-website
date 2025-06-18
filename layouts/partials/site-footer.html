@@ -33,7 +33,17 @@
   </div>
   <div class="footer-social">
     <a href="{{ $.Site.Params.Social_media.Facebook.Url }}" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-    <a href="{{ $.Site.Params.Social_media.Twitter.Url }}" class="social-icon"><i class="fab fa-twitter"></i></a>
     <a href="{{ $.Site.Params.Social_media.Instagram.Url }}" class="social-icon"><i class="fab fa-instagram"></i></a>
+    <a href="{{ $.Site.Params.Social_media.TikTok.Url }}" class="social-icon"><i class="fab fa-tiktok"></i></a>
+    <a href="{{ $.Site.Params.Social_media.SoundCloud.Url }}" class="social-icon"><i class="fab fa-soundcloud"></i></a>
+    <!-- <a href="{{ $.Site.Params.Social_media.Spotify.Url }}" class="social-icon"><i class="fab fa-spotify"></i></a> -->
+    <a href="{{ $.Site.Params.Social_media.Youtube.Url }}" class="social-icon"><i class="fab fa-youtube"></i></a>
+
+    {{ $mariageDotNet := resources.Get "images/fa-mariage-net.svg" }}
+    {{ with $mariageDotNet }}
+      <a href="{{ $.Site.Params.Social_media.MariageNet.Url }}" class="social-icon mariage-net-icon-container">
+        <i class="mariage-net-icon" style="mask-image: url('{{ .Permalink }}');"></i>
+      </a>
+    {{ end }}
   </div>
 </footer>

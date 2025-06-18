@@ -537,6 +537,24 @@
     color: goldenrod;
   }
 
+  .footer-social .mariage-net-icon {
+    height: 25px;
+    width: 25px;
+    background-color: #ddd;
+    mask-size: 25px 25px;
+    transition: background-color 0.3s;
+  }
+
+  .footer-social .mariage-net-icon:hover {
+    background-color: darkgoldenrod;
+  }
+
+  .footer-social .mariage-net-icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   .footer-supplement {
     max-width: 50rem;
     display: flex;
