@@ -982,6 +982,7 @@
     font-weight: 100;
     font-family: "WeddingFont";
     padding-top: 1.3rem;
+    z-index: 10;
   }
 
   .wedding-top h3 {
@@ -1140,6 +1141,7 @@
     font-size: 1.3rem;
     font-weight: bold;
     margin-bottom: 1rem;
+    z-index: 10;
   }
 
   .tariff-content {
