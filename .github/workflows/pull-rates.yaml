@@ -25,7 +25,16 @@ jobs:
         python -m pip install --upgrade pip
         pip install selenium beautifulsoup4
 
-    - name: Run pull-rate.py
+    - name: Install Chrome and ChromeDriver
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y wget unzip xvfb
+        sudo wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+        sudo apt install -y ./google-chrome-stable_current_amd64.deb
+        export CHROME_BIN=google-chrome-stable
+        export PATH=$PATH:/usr/bin/google-chrome-stable
+
+    - name: Run pull-rates.py
       run: python pull-rates.py
 
     - name: Commit new rates if any
