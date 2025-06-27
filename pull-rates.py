@@ -62,7 +62,7 @@ url = "https://www.mariages.net/musique-mariage/resch--e316860/avis"
 driver.get(url)
 
 # Wait for page content to load
-time.sleep(1)
+time.sleep(5)
 
 html = driver.page_source
 
