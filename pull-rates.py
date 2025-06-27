@@ -54,7 +54,7 @@ options.add_argument('--headless')
 # options.add_argument('--disable-gpu')
 options.add_argument('--no-sandbox')
 options.add_argument("--lang=fr-FR")
-options.add_argument("--disable-dev-shm-usage")
+# options.add_argument("--disable-dev-shm-usage")
 driver = webdriver.Chrome(options=options)
 
 # Load the page
@@ -65,12 +65,14 @@ driver.get(url)
 time.sleep(5)
 
 html = driver.page_source
+print(html)
 
 # Parse HTML with BeautifulSoup
 soup = BeautifulSoup(html, 'html.parser')
 
 # Extract review blocks
 reviews = soup.find_all('li', class_='storefrontReviewsTileSubpage')
+print(reviews)
 
 remote_rates = []
 
