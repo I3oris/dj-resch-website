@@ -11,7 +11,7 @@ import re
 from pathlib import Path
 
 url = "https://www.mariages.net/musique-mariage/resch--e316860/avis"
-rate_path = Path("../content/footer/rates")
+rate_path = Path("content/footer/rates")
 
 ### Read current rates ###
 
@@ -112,15 +112,6 @@ for review in reviews:
     except Exception as e:
         print(f"Skip review: {e}")
         continue
-
-# FAKE RATE TO REMOVE!
-remote_rates.append({
-            'author': "fake",
-            'date': datetime.strptime("27/06/2025", "%d/%m/%Y"),
-            'note': 3,
-            'title': "Hey!!",
-            'description': "description"
-        })
 
 # Sort by date
 remote_rates.sort(key=lambda x: x['date'])

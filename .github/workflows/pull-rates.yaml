@@ -1,4 +1,4 @@
-name: Pull and Commit New Rates
+name: Pull Rates
 
 on:
   schedule:
