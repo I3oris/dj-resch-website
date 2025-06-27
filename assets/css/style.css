@@ -1011,6 +1011,10 @@
     padding: 0rem;
   }
 
+  .wedding-image-container img {
+    max-height: 400px;
+  }
+
   @media (max-width: 768px) {
     .wedding-top {
       flex-direction: column-reverse;

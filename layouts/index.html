@@ -34,7 +34,7 @@
               {{ $photos = $photos | append (resources.Get (printf "%s/%s" $photosPath .Name)) }}
             {{ end }}
             {{ range $photos | first 1}}
-              {{ $resized := .Fill "400x300" }}
+              {{ $resized := .Fill "1600x1200" }}
               <div style="background-image: url('{{ $resized.Permalink }}');" alt="logo" class="home-image">
               </div>
             {{ end}}
@@ -43,7 +43,7 @@
           {{ with .image }}
             {{ $image = resources.Get . }}
             {{ with $image }}
-              {{ $resized := .Fill "400x300" }}
+              {{ $resized := .Fill "1600x1200" }}
               <div style="background-image: url('{{ $resized.Permalink }}');" alt="logo" class="home-image">
               </div>
             {{ end }}
