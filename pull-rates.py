@@ -52,7 +52,7 @@ for r in current_rates:
 options = Options()
 # options.add_argument('--headless')
 # options.add_argument('--disable-gpu')
-options.add_argument('--no-sandbox')
+# options.add_argument('--no-sandbox')
 options.add_argument("--lang=fr-FR")
 driver = webdriver.Chrome(options=options)
 
@@ -173,8 +173,8 @@ def write_rate(rate):
 
     # Markdown content
     content = f"""---
-title: {author}
-author: {author}
+title: "{author}"
+author: "{author}"
 date:  {date}
 rate: {note}
 ---
