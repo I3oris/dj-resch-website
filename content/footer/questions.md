@@ -33,6 +33,7 @@ Après avoir échangé sur les détails de vos attentes, un devis est envoyé pa
 Si tout est en ordre un acompte (30 %) sera demandé à la signature du devis.
 
 Lors des préparatifs, une "Feuille de Route" est réalisée notifiant les temps-forts et la trame musicale.
+
 Plusieurs appels sont organisés durant l'année pour mettre à jour divers détails :)
 
 ## Peux t-on payer en plusieurs fois ?
@@ -45,5 +46,5 @@ Pas forcément, cela dépend de la distance. Au-delà de 200 km, il faudra compt
 
 ## Quelles sont vos expériences et votre répertoire musical ?
 
-Je mix depuis 2015. Des discothèques au Grand Palais de Paris en passant par du camping, je suis un DJ qui sait s'adapter et lire sa piste de danse.
+Je mix depuis 2015. Des discothèques au Grand Palais de Paris en passant par du camping et festival, je suis un DJ qui sait s'adapter et lire sa piste de danse.
 Je joue de la Variété Française (80's/90's/00's/10's) aux musiques actuelles en passant par la House, Funk et l'Électro sans oublier le Latino/Dancehall/Afrohouse/Zouk/Raï/Kizomba/RNB/Reggaeton/Bachata/Tech et bien d'autres.
