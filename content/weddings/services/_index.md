@@ -6,13 +6,13 @@ layout: weddings-services
 
 ## Mes services
 
-En confiant l'animation musicale de votre évènement à DJ RESCH, vous serez assurés de recevoir les services d'un DJ professionnel qui saura être à l'écoute et s'adapter pour vous satisfaire et vous surprendre grâce à un vaste répertoire musicale multi-générationnel et des transitions fluides et efficaces.
+En choisissant DJ RESCH pour l’animation musicale de votre événement, vous bénéficiez d’un accompagnement professionnel, clé en main, personnalisé et à l’écoute. Avec un vaste répertoire multi-générationnel et des transitions fluides, chaque moment est pensé pour surprendre, rassembler et créer une ambiance inoubliable.
 
-Révélé par l'émission LEGOMASTERS et fort de plus de 10 ans d'expériences, Adrien a su marquer par son empreinte tout types d'événements prestigieux. Dj RESCH vous proposera différentes formules clé en main, toujours dans un souci de vous apporter une prestation de qualité répondant à votre demande.
+Son parcours l’a amené à collaborer avec des lieux et événements d’exception (Grand Palais de Paris, plateau TV), et même à partager sa créativité à la télévision dans l’émission LEGOMasters. Une aventure qui reflète son envie constante de surprendre. Son énergie et son savoir-faire font de lui un partenaire d’exception pour assurer le succès de votre soirée.
 
 ### Zone d'activité
 
-RESCH est basé à Châteauroux (36) et se déplace partout en France pour vos événements (sur devis).
+Basé à Châteauroux (36), DJ RESCH se déplace partout en France (sur devis) pour vos événements.
 
 
 Les tarifs suivant n'inclus donc pas le déplacement.
