@@ -20,3 +20,4 @@ Effets lumineux dynamiques (tubes LED)
 Zone d'activité
 
 Basé à Châteauroux (36), DJ RESCH se déplace partout en France (sur devis) pour vos événements.
+Les tarifs suivant n’inclus donc pas le déplacement.
