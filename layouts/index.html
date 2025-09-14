@@ -31,7 +31,7 @@
             {{ $photos_files := readDir (printf "assets/%s" $photosPath) }}
             {{ $photos := slice }}
             {{ range $photos_files }}
-              {{ $photos = $photos | append (resources.Get (printf "%s/%s" $photosPath .Name)) }}
+              {{ $photos = $photos | append (resources.Get (printf "%s/%s" $photosPath .Name) | fingerprint) }}
             {{ end }}
             {{ range $photos | first 1}}
               {{ $resized := .Fill "1600x1200" }}
@@ -41,7 +41,7 @@
           {{ end }}
 
           {{ with .image }}
-            {{ $image = resources.Get . }}
+            {{ $image = resources.Get . | fingerprint }}
             {{ with $image }}
               {{ $resized := .Fill "1600x1200" }}
               <div style="background-image: url('{{ $resized.Permalink }}');" alt="logo" class="home-image">

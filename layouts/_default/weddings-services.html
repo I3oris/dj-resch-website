@@ -11,20 +11,37 @@
       <div class="wedding-top-content-col">
         {{ .Content }}
       </div>
-      <div class="wedding-top-images-col">
-        {{ $image := resources.Get "images/wedding/dj-resch-photo1.jpg" }}
-        {{ with $image }}
-          <div class="wedding-image-container">
-            <img class="styled-image wedding-photo1" src="{{ $image.Permalink }}" alt="photo"/>
-          </div>
-        {{ end }}
+      <div class="wedding-top-images-grid">
+        <div class="wedding-top-images-col">
+          {{ $image := resources.Get "images/wedding/dj-resch-photo1.jpg" | fingerprint }}
+          {{ with $image }}
+            <div class="wedding-image-container">
+              <img class="styled-image wedding-photo1" src="{{ $image.Permalink }}" alt="photo"/>
+            </div>
+          {{ end }}
 
-        {{ $image := resources.Get "images/wedding/dj-resch-photo2.jpg" }}
-        {{ with $image }}
-          <div class="wedding-image-container">
-            <img class="styled-image wedding-photo2" src="{{ $image.Permalink }}" alt="photo"/>
-          </div>
-        {{ end }}
+          {{ $image := resources.Get "images/wedding/dj-resch-photo3.jpg" | fingerprint }}
+          {{ with $image }}
+            <div class="wedding-image-container">
+              <img class="styled-image wedding-photo2" src="{{ $image.Permalink }}" alt="photo"/>
+            </div>
+          {{ end }}
+        </div>
+        <div class="wedding-top-images-col">
+          {{ $image := resources.Get "images/wedding/dj-resch-photo2.jpg" | fingerprint }}
+          {{ with $image }}
+            <div class="wedding-image-container">
+              <img class="styled-image wedding-photo1" src="{{ $image.Permalink }}" alt="photo"/>
+            </div>
+          {{ end }}
+
+          {{ $image := resources.Get "images/wedding/dj-resch-photo4.jpg" | fingerprint }}
+          {{ with $image }}
+            <div class="wedding-image-container">
+              <img class="styled-image wedding-photo2" src="{{ $image.Permalink }}" alt="photo"/>
+            </div>
+          {{ end }}
+        </div>
       </div>
     </div>
 
