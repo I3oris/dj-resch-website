@@ -10,7 +10,7 @@ title: "En compléments"
     <td class="price">150,00€</td>
   </tr>
   <tr>
-    <td>2 Fontaines d'étincelles froides</td>
+    <td>Fontaines d'étincelles froides (2unités)</td>
     <td class="price">50,00€</td>
   </tr>
 </table>
@@ -33,7 +33,7 @@ VHR - Distance totale Aller et Retour
     <td class="price">150,00€</td>
   </tr>
   <tr>
-    <td>+ de 200 km (+ hotel)</td>
+    <td>+ de 200 km (+ Gîte)</td>
     <td class="price">Sur devis</td>
   </tr>
 </table>
