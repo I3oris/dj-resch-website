@@ -15,9 +15,9 @@ title: "En compléments"
   </tr>
 </table>
 
-### Déplacements pour un départ de Chateauroux (36)
+### Transport du matériel pour un départ de Chateauroux (36)
 
-Distance totale Aller/Retour
+VHR - Distance totale Aller et Retour
 
 <table class="footer-table">
   <tr>
@@ -26,11 +26,11 @@ Distance totale Aller/Retour
   </tr>
   <tr>
     <td>- de 100 km</td>
-    <td class="price">50,00€</td>
+    <td class="price">100,00€</td>
   </tr>
   <tr>
     <td>- de 200 km</td>
-    <td class="price">100,00€</td>
+    <td class="price">150,00€</td>
   </tr>
   <tr>
     <td>+ de 200 km (+ hotel)</td>
