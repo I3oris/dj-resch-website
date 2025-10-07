@@ -7,7 +7,7 @@ title: "En compléments"
 <table class="footer-table">
   <tr>
     <td>Ouverture de bal sur les nuages (fumée dense au sol)</td>
-    <td class="price">100,00€</td>
+    <td class="price">150,00€</td>
   </tr>
   <tr>
     <td>2 Fontaines d'étincelles froides</td>
