@@ -33,7 +33,7 @@ VHR - Distance totale Aller et Retour
     <td class="price">150,00€</td>
   </tr>
   <tr>
-    <td>+ de 200 km (+ Gîte)</td>
+    <td>+ de 200 km (+ Gîte ou hotel)</td>
     <td class="price">Sur devis</td>
   </tr>
 </table>
