@@ -9,4 +9,4 @@ price: 1200
 * Régie DJ Pioneer + DJ Desk
 * 2 barres à LED
 * 2 micros sans fil
-* Fumée légère (option gratuite)
+* Fumée légère (option inclus)
