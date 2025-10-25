@@ -5,9 +5,8 @@ emailSubject: "Réservation DJ Marriage: Formule Prestige"
 price: 1200
 ---
 
-* Sonorisation et éclairage de votre piste de danse
-* Equipements dj & dj set (2micros sans fils)
-* Tubes LED en façade (couleurs aux choix)
-* Stroboscopes
-* Fumée légère
-* Possibilité de réaliser 1 montage musicale personnalisé lors de vos temps-forts (entrée, ouverture de bal)
+* Sonorisation complète et éclairage de la piste de danse
+* Régie DJ Pioneer + DJ Desk
+* 2 barres à LED
+* 2 micros sans fil
+* Fumée légère (option gratuite)
