@@ -5,7 +5,6 @@ emailSubject: "Réservation DJ Marriage: Formule Dream"
 price: 1350
 ---
 
-
 * **Tout le contenu de la Formule Prestige**
 * Sonorisation extérieure sans cable (positionnement sur mesure)
 * 2 micros de discours sans fils
