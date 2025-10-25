@@ -8,4 +8,4 @@ price: 1300
 * Tout le contenu de la Formule Prestige
 * **Sonorisation extérieure sans cable**
 * **2 micros de discours sans fils**
-* Possibilité de réaliser 1 montage musicale personnalisé lors d'un temps-forts (entrée, ouverture de bal)
+* Montage musical personnalisé pour vos temps forts (entrée, ouverture de bal, etc.)(option inclus)
