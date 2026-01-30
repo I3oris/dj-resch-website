@@ -2,7 +2,7 @@
 title: "Prestige"
 subtitle: "Présence à partir du repas."
 emailSubject: "Réservation DJ Marriage: Formule Prestige"
-price: 1300
+price: 1500
 ---
 
 * Sonorisation complète et éclairage de la piste de danse
