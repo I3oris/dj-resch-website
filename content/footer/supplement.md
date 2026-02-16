@@ -2,7 +2,7 @@
 title: "En compléments"
 ---
 
-### Artifices
+### Options
 
 <table class="footer-table">
   <tr>
