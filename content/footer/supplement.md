@@ -10,7 +10,7 @@ title: "En compléments"
     <td class="price">180,00€</td>
   </tr>
   <tr>
-    <td>Fontaines d'étincelles froides (2unités)</td>
+    <td>Fontaines d'étincelles froides (pour 2 unités)</td>
     <td class="price">50,00€</td>
   </tr>
     <td>Canon Blaster a fumée</td>
