@@ -30,15 +30,15 @@ VHR - Distance totale Aller et Retour (0,80€/km)
     <td class="price">OFFERT</td>
   </tr>
   <tr>
-    <td>exemple : 100km offert + 100 km</td>
-    <td class="price">80,00€</td>
+    <td>exemple : 250km (100km offert + 150 km)</td>
+    <td class="price">120,00€</td>
   </tr>
   <tr>
     <td>exemple : 100km offert + 200 km</td>
     <td class="price">160,00€</td>
   </tr>
   <tr>
-    <td>+ de 200 km (prévoir gîte ou hôtel)</td>
+    <td>+ de 250 km (prévoir gîte ou hôtel)</td>
     <td class="price">Sur devis</td>
   </tr>
 </table>
