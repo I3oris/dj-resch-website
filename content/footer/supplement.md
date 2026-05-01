@@ -7,12 +7,17 @@ title: "En compléments"
 <table class="footer-table">
   <tr>
     <td>Ouverture de bal sur les nuages (fumée dense au sol)</td>
-    <td class="price">200,00€</td>
+    <td class="price">180,00€</td>
   </tr>
   <tr>
     <td>Fontaines d'étincelles froides (2unités)</td>
     <td class="price">50,00€</td>
   </tr>
+    <td>Canon Blaster a fumée</td>
+    <td class="price">50,00€</td>
+  <tr>
+    <td>Eclairage de salle (projecteurs architechturaux)(pour 2 unités)</td>
+    <td class="price">25,00€</td>
 </table>
 
 ### Transport du matériel pour un départ de Chateauroux (36)
