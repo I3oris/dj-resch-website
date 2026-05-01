@@ -26,7 +26,7 @@ VHR - Distance totale Aller et Retour (0,80€/km)
 
 <table class="footer-table">
   <tr>
-    <td>1000 premier km</td>
+    <td>100 premier km</td>
     <td class="price">OFFERT</td>
   </tr>
   <tr>
