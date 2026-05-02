@@ -22,7 +22,7 @@ title: "En compléments"
 
 ### Transport du matériel pour un départ de Chateauroux (36)
 
-VHR - Distance totale Aller et Retour (0,80€/km)
+VHR - Distance totale Aller et Retour
 
 <table class="footer-table">
   <tr>
@@ -31,7 +31,7 @@ VHR - Distance totale Aller et Retour (0,80€/km)
   </tr>
   <tr>
     <td>km supplémentaire</td>
-    <td class="price">0,80€</td>
+    <td class="price">0,80€/km</td>
   </tr>
   <tr>
     <td>+ de 250 km (prévoir gîte ou hôtel)</td>
