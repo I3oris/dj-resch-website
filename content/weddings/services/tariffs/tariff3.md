@@ -1,6 +1,6 @@
 ---
 title: "Dream"
-subtitle: "Présence dès la cérémonie."
+subtitle: "Présence à partir du cocktail/vin d'honneur."
 emailSubject: "Réservation DJ Marriage: Formule Dream"
 price: 2000
 ---
