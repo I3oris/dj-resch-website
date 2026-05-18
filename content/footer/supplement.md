@@ -6,7 +6,7 @@ title: "En compléments"
 
 <table class="footer-table">
   <tr>
-    <td>Cérémonie Laïque</td>
+    <td>Cérémonie Laïque (avec 2 micros sans fils)</td>
     <td class="price">100,00€</td>
   </tr>
   <tr>
