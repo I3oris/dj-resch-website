@@ -2,10 +2,10 @@
 title: "Dream"
 subtitle: "Présence dès la cérémonie."
 emailSubject: "Réservation DJ Marriage: Formule Dream"
-price: 1700
+price: 2000
 ---
 
-* **Tout le contenu de la Formule Prestige**
-* Sonorisation extérieure sans cables (positionnement sur mesure)
-* 2 micros de discours supplémentaires sans fils
-* Montage musical personnalisé pour vos temps forts (ouverture de bal, entrée, etc.)(option inclus)
+* **Tout le contenu de la Formule Magic**
+* 2 Fontaines d'étincelles froides (3m de haut)
+* Ouverture de bal sur les nuages (Machine a fumée lourde au sol)
+* Eclairage de salle (4 projecteurs architechturaux)
