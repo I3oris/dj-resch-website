@@ -21,6 +21,9 @@ title: "En compléments"
   <tr>
     <td>Eclairage de salle (projecteurs architechturaux)(pour 2 unités)</td>
     <td class="price">25,00€</td>
+  <tr>
+    <td>Machines a fumée verticales (jusqu'à 5m de haut)</td>
+    <td class="price">50,00€</td>
 </table>
 
 ### Transport du matériel pour un départ de Chateauroux (36)
