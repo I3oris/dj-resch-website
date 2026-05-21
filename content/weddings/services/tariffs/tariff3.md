@@ -1,12 +1,11 @@
 ---
 title: "Dream"
-subtitle: "Présence à partir du cocktail/vin d'honneur."
+subtitle: "Présence dès la cérémonie."
 emailSubject: "Réservation DJ Marriage: Formule Dream"
-price: 1900
+price: 1800
 ---
 
 * **Tout le contenu de la Formule Magic**
-* 2 Fontaines d'étincelles froides (3m de haut)
-* Ouverture de bal sur les nuages (Machine à fumée lourde)
-* Machines à fumée verticales.
-* Eclairage de salle (4 projecteurs architechturaux)
+* Sonorisation extérieure sans cables sur pied (positionnement sur mesure)
+* 2 micros main pour discours sans fils
+* Ambiance musicale assuré par ordinateur
