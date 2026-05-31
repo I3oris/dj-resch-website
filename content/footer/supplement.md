@@ -6,12 +6,12 @@ title: "En compléments"
 
 <table class="footer-table">
   <tr>
-    <td>Cérémonie Laïque (avec 2 micros sans fils)</td>
+    <td>Sonorisation Cérémonie Laïque (2 micros sans fils)</td>
     <td class="price">150,00€</td>
   </tr>
   <tr>
   <tr>
-    <td> Sonorisation Cocktail (avec 2 micros sans fils)</td>
+    <td>Sonorisation Cocktail (2 micros sans fils)</td>
     <td class="price">150,00€</td>
   </tr>
   <tr>
