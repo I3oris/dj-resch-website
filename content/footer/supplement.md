@@ -6,7 +6,7 @@ title: "En compléments"
 
 <table class="footer-table">
   <tr>
-    <td>Sonorisation Cérémonie Laïque (2 micros sans fils)</td>
+    <td>Sonorisation Cérémonie (2 micros sans fils)</td>
     <td class="price">150,00€</td>
   </tr>
   <tr>
@@ -24,8 +24,8 @@ title: "En compléments"
     <td>Canon Blaster à fumée</td>
     <td class="price">50,00€</td>
   <tr>
-    <td>Eclairage de salle (1 projecteur architechtural)</td>
-    <td class="price">15,00€</td>
+    <td>Eclairage de salle (4 projecteurs architechturaux)</td>
+    <td class="price">60,00€</td>
   <tr>
     <td>Machines à fumée verticales (jusqu'à 5m de haut)</td>
     <td class="price">90,00€</td>
