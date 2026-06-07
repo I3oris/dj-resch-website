@@ -50,6 +50,6 @@ Plusieurs appels sont organisés durant l'année pour mettre à jour divers dét
 DJ professionnel depuis 2019, j’ai eu l’opportunité de me produire dans des contextes très variés : réaliser les showcases et première partie de grands artistes en discothèque (SoManess, Marwa Loud, Tairo, Dj Bens, Maeva Carter,...), des événements au Grand Palais à Paris, festivals, casinos, campings et soirées privées.
 Cette diversité d’expériences m’a permis de développer une forte capacité d’adaptation et de lecture de la piste de danse.
 
-C'est pourquoi mon univers musical est vaste, que ça soit de la variété française (80's/90's/00's/10's) aux tendances actuelles en passant par la House, Funk et l'Électro sans oublier le Latino/Dancehall/Afrohouse/Zouk/Raï/Kizomba/Rock/Indie/RNB/Hip-Hop/Reggaeton/Bachata/Tech et bien d'autres.
+C'est pourquoi mon univers musical est vaste, que ça soit de la variété française (80's/90's/00's/10's) aux tendances actuelles sans oublier la House/Funk/Latino/Dancehall/Afrohouse/Rock/Indie/RNB/Hip-Hop/Reggaeton/Bachata/Zouk/Raï/Kizomba/Tech/Jersay/Électro et bien d'autres.
 
 Mes transitions sont travaillées avec beaucoup de soins afin de passer d’un style à un autre de manière naturelle, moderne et dynamique.
