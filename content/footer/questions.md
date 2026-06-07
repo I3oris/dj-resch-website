@@ -22,6 +22,14 @@ Oui je suis flexible, ceci dit la communication est la clé, dès qu'un changeme
 
 Je n'oblige à rien, mais c'est toujours appréciable lorsque je suis convié au repas.
 
+## Peux t-on payer en plusieurs fois ?
+
+Oui, la prestation devra simplement être soldée, au plus tard, la veille de la prestation.
+
+## Avez-vous besoin de dormir sur place ?
+
+Pas nécessairement, cela dépend de la distance. Au-delà de 200 km de Châteauroux, il faudra prévoir une solution de logement avec parking sécurisé autrement le retour se fait directement après la prestation.
+
 ###
 
 ## Comment se passe une réservation ?
@@ -36,13 +44,6 @@ Lors des préparatifs, une "Feuille de Route" est réalisée notifiant les temps
 
 Plusieurs appels sont organisés durant l'année pour mettre à jour divers détails :)
 
-## Peux t-on payer en plusieurs fois ?
-
-Oui, la prestation devra simplement être soldée, au plus tard, la veille de la prestation.
-
-## Avez-vous besoin de dormir sur place ?
-
-Pas nécessairement, cela dépend de la distance. Au-delà de 200 km de Châteauroux, il faudra prévoir une solution de logement avec parking sécurisé autrement le retour se fait directement après la prestation.
 
 ## Quelles sont vos expériences et votre répertoire musical ?
 
