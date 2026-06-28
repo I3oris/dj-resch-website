@@ -15,7 +15,7 @@ title: "En compléments"
   </tr>
   <tr>
     <td>Ouverture de bal sur les nuages (fumée dense au sol)</td>
-    <td class="price">100,00€</td>
+    <td class="price">80,00€</td>
   <tr>
     <td>Fontaines d'étincelles froides (pour 2 unités)</td>
     <td class="price">50,00€</td>
@@ -24,7 +24,7 @@ title: "En compléments"
     <td class="price">50,00€</td>
   <tr>
     <td>Eclairage de salle (4 projecteurs architechturaux)</td>
-    <td class="price">60,00€</td>
+    <td class="price">100,00€</td>
   <tr>
     <td>Machines à fumée verticales (jusqu'à 5m de haut)</td>
     <td class="price">90,00€</td>
