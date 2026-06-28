@@ -2,7 +2,7 @@
 title: "Magic"
 subtitle: "Présence à partir du cocktail/vin d'honneur."
 emailSubject: "Réservation DJ Marriage: Formule Magic"
-price: 1750
+price: 1800
 ---
 
 * **Tout le contenu de la Formule Prestige**
