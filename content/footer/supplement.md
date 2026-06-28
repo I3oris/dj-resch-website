@@ -7,12 +7,12 @@ title: "En compléments"
 <table class="footer-table">
   <tr>
     <td>Sonorisation Cérémonie (2 micros sans fils)</td>
-    <td class="price">150,00€</td>
+    <td class="price">200,00€</td>
   </tr>
   <tr>
   <tr>
     <td>Sonorisation Cocktail (2 micros sans fils)</td>
-    <td class="price">150,00€</td>
+    <td class="price">200,00€</td>
   </tr>
   <tr>
     <td>Ouverture de bal sur les nuages (fumée dense au sol)</td>
