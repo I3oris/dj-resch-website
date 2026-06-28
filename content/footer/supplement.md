@@ -10,7 +10,6 @@ title: "En compléments"
     <td class="price">200,00€</td>
   </tr>
   <tr>
-  <tr>
     <td>Sonorisation Cocktail (2 micros sans fils)</td>
     <td class="price">200,00€</td>
   </tr>
