@@ -15,13 +15,13 @@ title: "En compléments"
   </tr>
   <tr>
     <td>Ouverture de bal sur les nuages (fumée dense au sol)</td>
-    <td class="price">80,00€</td>
+    <td class="price"80,00€</td>
   <tr>
     <td>Fontaines d'étincelles froides (pour 2 unités)</td>
     <td class="price">50,00€</td>
   </tr>
     <td>Canon Blaster à fumée</td>
-    <td class="price">50,00€</td>
+    <td class="price">40,00€</td>
   <tr>
     <td>Eclairage de salle (4 projecteurs architechturaux)</td>
     <td class="price">100,00€</td>
