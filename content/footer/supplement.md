@@ -7,11 +7,11 @@ title: "En compléments"
 <table class="footer-table">
   <tr>
     <td>Sonorisation Cérémonie (2 micros sans fils)</td>
-    <td class="price">150,00€</td>
+    <td class="price">200,00€</td>
   </tr>
   <tr>
     <td>Sonorisation Cocktail (2 micros sans fils)</td>
-    <td class="price">150,00€</td>
+    <td class="price">200,00€</td>
   </tr>
   <tr>
     <td>Ouverture de bal sur les nuages (fumée dense au sol)</td>
@@ -38,11 +38,7 @@ title: "En compléments"
     <td class="price">inclus</td>
   </tr>
   <tr>
-    <td>100-200km</td>
-    <td class="price">Forfait déplacement</td>
-  </tr>
-  <tr>
-    <td>+ de 200 km (hébergement si nécéssaire)</td>
+    <td>Au delà (hébergement si nécéssaire)</td>
     <td class="price">Sur devis</td>
   </tr>
 </table>
