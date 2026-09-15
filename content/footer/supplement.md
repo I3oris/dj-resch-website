@@ -30,21 +30,19 @@ title: "En compléments"
     <td class="price">90,00€</td>
 </table>
 
-### Transport du matériel pour un départ de Chateauroux (36)
-
-VHR - Distance totale Aller et Retour
+### VHR - Distance depuis Châteauroux
 
 <table class="footer-table">
   <tr>
-    <td>100 premier km</td>
-    <td class="price">OFFERT</td>
+    <td>0-100km</td>
+    <td class="price">inclus</td>
   </tr>
   <tr>
-    <td>km supplémentaire</td>
-    <td class="price">0,80€/km</td>
+    <td>100-200km</td>
+    <td class="price">Forfait déplacement</td>
   </tr>
   <tr>
-    <td>+ de 300 km (prévoir gîte ou hôtel)</td>
+    <td>+ de 200 km (hébergement si nécéssaire)</td>
     <td class="price">Sur devis</td>
   </tr>
 </table>
