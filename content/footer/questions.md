@@ -28,7 +28,7 @@ Oui, la prestation devra simplement être soldée, au plus tard, la veille de la
 
 ## Avez-vous besoin de dormir sur place ?
 
-Pas nécessairement, cela dépend de la distance. Au-delà de 200 km de Châteauroux, il faudra prévoir une solution de logement avec parking sécurisé autrement le retour se fait directement après la prestation.
+Non, le retour se fait directement après la soirée. Une solution d'hébergement avec parking sécurisé peux être envisagé au delà de 100km de Châteauroux.
 
 ###
 
