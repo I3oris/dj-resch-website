@@ -11,4 +11,4 @@ Dès les préparatifs, Adrien a été super disponible et impliqué. Il est mêm
 
 Et bien sûr, côté musique, c’était juste parfait : une ambiance de folie du début à la fin, et il a même dépassé niveau horaire de fin de soirée tellement c'était le feu sur la piste de danse.
 
-Un DJ au top, mais surtout une personne en or. On ne pouvait pas rêver mieux pour notre mariage. Foncez les yeux fermés, vous ne serez pas déçus ! ❤️
+Un DJ au top, mais surtout une personne en or. On ne pouvait pas rêver mieux pour notre mariage. Foncez les yeux fermés, vous ne serez pas déçus ! ❤️ 
