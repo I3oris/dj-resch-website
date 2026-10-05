@@ -18,4 +18,4 @@ Son énergie et son savoir-faire font de lui un partenaire fiable et discret, pl
 ### Zone d'activité
 
 Basé à Châteauroux (36), DJ RESCH se déplace partout en France pour vos événements.
-Les déplacements jusqu’à 100 km sont inclus. Au-delà, les frais de déplacement et d’hébergement éventuels sont étudiés sur devis.
+Les déplacements sont inclus. Au-delà de 100km de Chateauroux, les frais de déplacement et d’hébergement éventuels sont étudiés sur devis.
