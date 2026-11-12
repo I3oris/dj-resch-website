@@ -23,8 +23,8 @@ title: "En compléments"
     <td>Canon Blaster à fumée</td>
     <td class="price">50,00€</td>
   <tr>
-    <td>Eclairage de salle (4 projecteurs architechturaux)</td>
-    <td class="price">60,00€</td>
+    <td>Eclairage de salle (6 projecteurs architechturaux sans câbles)</td>
+    <td class="price">100,00€</td>
   <tr>
     <td>Machines à fumée verticales (jusqu'à 5m de haut)</td>
     <td class="price">80,00€</td>
